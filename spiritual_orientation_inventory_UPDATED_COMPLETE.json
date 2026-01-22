@@ -1,0 +1,4127 @@
+{
+  "schema_version": "1.0",
+  "source": {
+    "xlsx": "Spiritual_Orientation_Inventory_Design_FINISHED.xlsx"
+  },
+  "indices": {
+    "meaning_symbolic": {
+      "domain": "Meaning",
+      "description": "Approaches religious/spiritual language primarily as symbol/metaphor/poetry; meaning emergent.",
+      "low_label": "Literal/Concrete",
+      "high_label": "Symbolic/Metaphorical",
+      "notes": "Related: Wulff symbolic interpretation / second naiveté"
+    },
+    "meaning_literal": {
+      "domain": "Meaning",
+      "description": "Leans toward literal/factual claims and fixed meanings in sacred language/text.",
+      "low_label": "Symbolic/Metaphorical",
+      "high_label": "Literal/Concrete",
+      "notes": "Used to detect continuing literalism vs symbolic"
+    },
+    "meaning_pragmatic": {
+      "domain": "Meaning",
+      "description": "Evaluates meaning by outcomes, usefulness, and real-world impact.",
+      "low_label": "Abstract/Speculative",
+      "high_label": "Pragmatic/Outcome-based",
+      "notes": "Fits action-oriented users"
+    },
+    "uncertainty_comfort": {
+      "domain": "Meaning",
+      "description": "Comfort holding ambiguity and unresolved questions.",
+      "low_label": "Needs certainty",
+      "high_label": "Comfortable with ambiguity",
+      "notes": "Important for deconstruction recovery"
+    },
+    "transcendence_openness": {
+      "domain": "Meaning",
+      "description": "Openness to some form of transcendence (theistic or non-theistic) as possibility.",
+      "low_label": "Closed",
+      "high_label": "Open",
+      "notes": "No doctrine; only openness"
+    },
+    "authority_internal": {
+      "domain": "Authority",
+      "description": "Locates authority primarily in personal judgment/conscience.",
+      "low_label": "External",
+      "high_label": "Internal",
+      "notes": "Authority reconstruction core"
+    },
+    "authority_relational": {
+      "domain": "Authority",
+      "description": "Relies on dialogue with trusted people/communities while retaining agency.",
+      "low_label": "Solo",
+      "high_label": "Relational",
+      "notes": "Not deference; collaborative"
+    },
+    "authority_text": {
+      "domain": "Authority",
+      "description": "Weights sacred texts/traditions as meaningful sources (not necessarily literal).",
+      "low_label": "Low",
+      "high_label": "High",
+      "notes": "Used to branch into text items"
+    },
+    "authority_science_reason": {
+      "domain": "Authority",
+      "description": "Weights evidence, science, and reason as primary sources of authority.",
+      "low_label": "Low",
+      "high_label": "High",
+      "notes": "Common in deconstruction pathways"
+    },
+    "belief_reinterpret": {
+      "domain": "Belief handling",
+      "description": "Tends to reinterpret inherited beliefs rather than discard.",
+      "low_label": "Discard",
+      "high_label": "Reinterpret",
+      "notes": null
+    },
+    "belief_suspend": {
+      "domain": "Belief handling",
+      "description": "Comfort holding 'I don't know' / suspending belief claims.",
+      "low_label": "Needs answers",
+      "high_label": "Can suspend",
+      "notes": null
+    },
+    "belief_reject": {
+      "domain": "Belief handling",
+      "description": "Tends to reject inherited belief structures as not recoverable.",
+      "low_label": "Recover",
+      "high_label": "Reject",
+      "notes": null
+    },
+    "moral_care_dignity": {
+      "domain": "Moral anchors",
+      "description": "Prioritizes care/harm reduction and human dignity.",
+      "low_label": "Low",
+      "high_label": "High",
+      "notes": "Moral Foundations (care) + dignity"
+    },
+    "moral_fairness": {
+      "domain": "Moral anchors",
+      "description": "Prioritizes fairness/reciprocity and equal treatment.",
+      "low_label": "Low",
+      "high_label": "High",
+      "notes": "Moral Foundations (fairness)"
+    },
+    "moral_loyalty_order": {
+      "domain": "Moral anchors",
+      "description": "Values loyalty/order/tradition as stabilizing moral goods.",
+      "low_label": "Low",
+      "high_label": "High",
+      "notes": "Included carefully; non-judgment"
+    },
+    "sacred_values_strength": {
+      "domain": "Moral anchors",
+      "description": "Strength of non-negotiable/protected values (not necessarily religious).",
+      "low_label": "Low",
+      "high_label": "High",
+      "notes": "Sacred/protected values research"
+    },
+    "justice_scope_systemic": {
+      "domain": "Lived ethics",
+      "description": "Attention to systemic/structural injustice and power.",
+      "low_label": "Interpersonal",
+      "high_label": "Systemic",
+      "notes": "Important for racial/queer harm"
+    },
+    "justice_scope_interpersonal": {
+      "domain": "Lived ethics",
+      "description": "Attention to interpersonal harm and relational ethics.",
+      "low_label": "Systemic",
+      "high_label": "Interpersonal",
+      "notes": "Complementary"
+    },
+    "expression_ethics_first": {
+      "domain": "Lived ethics",
+      "description": "Anchors identity in how to live rather than what to believe.",
+      "low_label": "Belief-first",
+      "high_label": "Ethics-first",
+      "notes": "Saroglou behaving"
+    },
+    "expression_ritual_rhythm": {
+      "domain": "Practice",
+      "description": "Desire for rhythm/ritual/marking time (without enforcement).",
+      "low_label": "Low",
+      "high_label": "High",
+      "notes": "Orthopraxy without orthodoxy"
+    },
+    "practice_readiness": {
+      "domain": "Practice",
+      "description": "Willingness to try practices experimentally now.",
+      "low_label": "Not ready",
+      "high_label": "Ready",
+      "notes": null
+    },
+    "structure_preference": {
+      "domain": "Practice",
+      "description": "Preference for structure/rules vs flexibility in practice.",
+      "low_label": "Flexible",
+      "high_label": "Structured",
+      "notes": "Not hierarchy"
+    },
+    "system_distrust_sensitivity": {
+      "domain": "Safety",
+      "description": "Sensitivity to shame/hierarchy/being boxed; distrust of systems.",
+      "low_label": "Low",
+      "high_label": "High",
+      "notes": "Used for tone + surfacing"
+    },
+    "identity_integration": {
+      "domain": "Integration",
+      "description": "Desire to integrate past tradition with current self vs start over.",
+      "low_label": "Start over",
+      "high_label": "Integrate",
+      "notes": "Helps religious history section"
+    },
+    "practice_low_pressure": {
+      "domain": "Practice",
+      "description": "Prefers practices that are flexible, low-pressure, and not tied to belief enforcement; values optionality and experimentation.",
+      "low_label": "Structured/Committed",
+      "high_label": "Low-pressure/Optional",
+      "notes": "Used to recommend gentle, non-coercive practices; aligns with deconstruction-sensitive design."
+    },
+    "practice_action_first": {
+      "domain": "Practice",
+      "description": "Leans toward grounding spirituality/values through concrete ethical action, service, or impact rather than primarily through belief coherence or contemplation.",
+      "low_label": "Reflection-first",
+      "high_label": "Action-first",
+      "notes": "Used to prioritize action-oriented pathways and ethics-as-anchor outputs."
+    },
+    "moral_sanctity_purity": {
+      "domain": "Moral anchors",
+      "description": "Concern for purity, sacred boundaries, and elevation above base desires.",
+      "low_label": "Low",
+      "high_label": "High",
+      "notes": "Moral Foundations (sanctity); distinguishes conservative vs progressive religious orientation"
+    },
+    "coping_benevolent_reappraisal": {
+      "domain": "Religious Coping",
+      "description": "Tendency to reframe suffering as spiritually meaningful or part of a larger purpose.",
+      "low_label": "Low",
+      "high_label": "High",
+      "notes": "Positive religious coping; associated with resilience and well-being (Pargament et al.)"
+    },
+    "coping_punishing_reappraisal": {
+      "domain": "Religious Coping",
+      "description": "Tendency to view suffering as punishment, abandonment, or evidence of personal wrongdoing.",
+      "low_label": "Low",
+      "high_label": "High",
+      "notes": "Negative religious coping; mental health risk factor; associated with increased distress and mortality (Pargament et al.)"
+    }
+  },
+  "quiz_versions": {
+    "25Q Core": {
+      "question_ids": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08",
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15",
+        "C16",
+        "C17",
+        "C18",
+        "C19",
+        "C20",
+        "C21",
+        "C22",
+        "C23",
+        "C24",
+        "C25"
+      ],
+      "notes": "Shorter version. Uses adaptive branching (C11)."
+    },
+    "55Q Extended": {
+      "question_ids": [
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08",
+        "C09",
+        "C10",
+        "C11",
+        "C12",
+        "C13",
+        "C14",
+        "C15",
+        "C16",
+        "C17",
+        "C18",
+        "C19",
+        "C20",
+        "C21",
+        "C22",
+        "C23",
+        "C24",
+        "C25",
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05",
+        "E06",
+        "E07",
+        "E08",
+        "E09",
+        "E10",
+        "E11",
+        "E12",
+        "E13",
+        "E14",
+        "E15",
+        "E16",
+        "E17",
+        "E18",
+        "E19",
+        "E20",
+        "E21",
+        "E22",
+        "E23",
+        "E24",
+        "E25",
+        "E26",
+        "E27",
+        "E28",
+        "E29",
+        "E30"
+      ],
+      "notes": "Complete version with Sanctity/Purity foundation and Religious Coping measures. Includes all extended nuance items plus critical psychological constructs."
+    }
+  },
+  "questions": [
+    {
+      "id": "C01",
+      "track": "Core",
+      "domain": "Meaning",
+      "item_type": "Forced choice",
+      "prompt": "When you hear spiritual or religious language, you are usually closer to…",
+      "labels": "A/B",
+      "response_type": "A|B",
+      "adaptive_rule": null,
+      "notes": "Sets tone for symbolic vs literal.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Looking for what it symbolizes or points toward, even if it isn’t literally true.",
+          "weights_raw": "meaning_symbolic:+2,uncertainty_comfort:+1",
+          "weights": {
+            "meaning_symbolic": 2,
+            "uncertainty_comfort": 1
+          },
+          "next": null
+        },
+        {
+          "id": "B",
+          "text": "Mostly asking whether it is factually true before it matters.",
+          "weights_raw": "meaning_literal:+2,uncertainty_comfort:-1",
+          "weights": {
+            "meaning_literal": 2,
+            "uncertainty_comfort": -1
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "C02",
+      "track": "Core",
+      "domain": "Meaning",
+      "item_type": "Likert-5",
+      "prompt": "I’m comfortable holding big questions without needing final answers right now.",
+      "labels": "1 Strongly disagree | 2 Disagree | 3 Neutral | 4 Agree | 5 Strongly agree",
+      "response_type": "1-5",
+      "adaptive_rule": null,
+      "notes": "Likert scoring: -2,-1,0,+1,+2 multiplied by unit weights: {'uncertainty_comfort': 1, 'belief_suspend': 1}.  Structured options generated from unit weights.",
+      "options": [
+        {
+          "id": "1",
+          "text": "Strongly disagree",
+          "weights_raw": "uncertainty_comfort:-2,belief_suspend:-2",
+          "weights": {
+            "uncertainty_comfort": -2,
+            "belief_suspend": -2
+          },
+          "next": null
+        },
+        {
+          "id": "2",
+          "text": "Disagree",
+          "weights_raw": "uncertainty_comfort:-1,belief_suspend:-1",
+          "weights": {
+            "uncertainty_comfort": -1,
+            "belief_suspend": -1
+          },
+          "next": null
+        },
+        {
+          "id": "3",
+          "text": "Neutral",
+          "weights_raw": "",
+          "weights": {
+            "uncertainty_comfort": 0,
+            "belief_suspend": 0
+          },
+          "next": null
+        },
+        {
+          "id": "4",
+          "text": "Agree",
+          "weights_raw": "uncertainty_comfort:+1,belief_suspend:+1",
+          "weights": {
+            "uncertainty_comfort": 1,
+            "belief_suspend": 1
+          },
+          "next": null
+        },
+        {
+          "id": "5",
+          "text": "Strongly agree",
+          "weights_raw": "uncertainty_comfort:+2,belief_suspend:+2",
+          "weights": {
+            "uncertainty_comfort": 2,
+            "belief_suspend": 2
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "C03",
+      "track": "Core",
+      "domain": "Meaning",
+      "item_type": "Forced choice",
+      "prompt": "When something feels meaningful, it is usually because…",
+      "labels": "A/B",
+      "response_type": "A|B",
+      "adaptive_rule": null,
+      "notes": null,
+      "options": [
+        {
+          "id": "A",
+          "text": "It connects with a deeper story, symbol, or sense of mystery.",
+          "weights_raw": "meaning_symbolic:+2,transcendence_openness:+1",
+          "weights": {
+            "meaning_symbolic": 2,
+            "transcendence_openness": 1
+          },
+          "next": null
+        },
+        {
+          "id": "B",
+          "text": "It produces better outcomes or reduces harm in real life.",
+          "weights_raw": "meaning_pragmatic:+2",
+          "weights": {
+            "meaning_pragmatic": 2
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "C04",
+      "track": "Core",
+      "domain": "Meaning",
+      "item_type": "Likert-5",
+      "prompt": "I still feel drawn to the possibility of something larger than myself, even if I’m unsure what to call it.",
+      "labels": "1 Strongly disagree | 2 Disagree | 3 Neutral | 4 Agree | 5 Strongly agree",
+      "response_type": "1-5",
+      "adaptive_rule": null,
+      "notes": "Likert scoring: -2,-1,0,+1,+2 multiplied by unit weights: {'transcendence_openness': 1}.  Structured options generated from unit weights.",
+      "options": [
+        {
+          "id": "1",
+          "text": "Strongly disagree",
+          "weights_raw": "transcendence_openness:-2",
+          "weights": {
+            "transcendence_openness": -2
+          },
+          "next": null
+        },
+        {
+          "id": "2",
+          "text": "Disagree",
+          "weights_raw": "transcendence_openness:-1",
+          "weights": {
+            "transcendence_openness": -1
+          },
+          "next": null
+        },
+        {
+          "id": "3",
+          "text": "Neutral",
+          "weights_raw": "",
+          "weights": {
+            "transcendence_openness": 0
+          },
+          "next": null
+        },
+        {
+          "id": "4",
+          "text": "Agree",
+          "weights_raw": "transcendence_openness:+1",
+          "weights": {
+            "transcendence_openness": 1
+          },
+          "next": null
+        },
+        {
+          "id": "5",
+          "text": "Strongly agree",
+          "weights_raw": "transcendence_openness:+2",
+          "weights": {
+            "transcendence_openness": 2
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "C05",
+      "track": "Core",
+      "domain": "Meaning",
+      "item_type": "Multiple choice",
+      "prompt": "Right now, “God-language” feels closest to…",
+      "labels": "A | B | C | D",
+      "response_type": "A / B / C / D",
+      "adaptive_rule": null,
+      "notes": "No doctrine; captures openness/avoidance.",
+      "options": [
+        {
+          "id": "A",
+          "text": "A poetic or symbolic way to talk about reality and meaning.",
+          "weights_raw": "meaning_symbolic:+2",
+          "weights": {
+            "meaning_symbolic": 2
+          },
+          "next": null
+        },
+        {
+          "id": "B",
+          "text": "A real presence/being I’m open to, even if uncertain.",
+          "weights_raw": "transcendence_openness:+2,meaning_literal:+1",
+          "weights": {
+            "transcendence_openness": 2,
+            "meaning_literal": 1
+          },
+          "next": null
+        },
+        {
+          "id": "C",
+          "text": "A concept I’m not using right now.",
+          "weights_raw": "belief_reject:+1,transcendence_openness:-1",
+          "weights": {
+            "belief_reject": 1,
+            "transcendence_openness": -1
+          },
+          "next": null
+        },
+        {
+          "id": "D",
+          "text": "Something I’m actively avoiding because it feels loaded.",
+          "weights_raw": "system_distrust_sensitivity:+2",
+          "weights": {
+            "system_distrust_sensitivity": 2
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "C06",
+      "track": "Core",
+      "domain": "Meaning",
+      "item_type": "Forced choice",
+      "prompt": "When people insist there is only one right interpretation of reality, you tend to…",
+      "labels": "A/B",
+      "response_type": "A|B",
+      "adaptive_rule": null,
+      "notes": null,
+      "options": [
+        {
+          "id": "A",
+          "text": "Feel wary; you prefer interpretations that can be revised with new insight.",
+          "weights_raw": "uncertainty_comfort:+1,authority_internal:+1,system_distrust_sensitivity:+1",
+          "weights": {
+            "uncertainty_comfort": 1,
+            "authority_internal": 1,
+            "system_distrust_sensitivity": 1
+          },
+          "next": null
+        },
+        {
+          "id": "B",
+          "text": "Feel relieved; clarity and certainty are stabilizing.",
+          "weights_raw": "structure_preference:+1,meaning_literal:+1",
+          "weights": {
+            "structure_preference": 1,
+            "meaning_literal": 1
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "C07",
+      "track": "Core",
+      "domain": "Meaning",
+      "item_type": "Likert-5",
+      "prompt": "My goal is not certainty, but integrity: living in a way that makes sense with what I know now.",
+      "labels": "1 Strongly disagree | 2 Disagree | 3 Neutral | 4 Agree | 5 Strongly agree",
+      "response_type": "1-5",
+      "adaptive_rule": null,
+      "notes": "Likert scoring: -2,-1,0,+1,+2 multiplied by unit weights: {'authority_internal': 1, 'expression_ethics_first': 1}.  Structured options generated from unit weights.",
+      "options": [
+        {
+          "id": "1",
+          "text": "Strongly disagree",
+          "weights_raw": "authority_internal:-2,expression_ethics_first:-2",
+          "weights": {
+            "authority_internal": -2,
+            "expression_ethics_first": -2
+          },
+          "next": null
+        },
+        {
+          "id": "2",
+          "text": "Disagree",
+          "weights_raw": "authority_internal:-1,expression_ethics_first:-1",
+          "weights": {
+            "authority_internal": -1,
+            "expression_ethics_first": -1
+          },
+          "next": null
+        },
+        {
+          "id": "3",
+          "text": "Neutral",
+          "weights_raw": "",
+          "weights": {
+            "authority_internal": 0,
+            "expression_ethics_first": 0
+          },
+          "next": null
+        },
+        {
+          "id": "4",
+          "text": "Agree",
+          "weights_raw": "authority_internal:+1,expression_ethics_first:+1",
+          "weights": {
+            "authority_internal": 1,
+            "expression_ethics_first": 1
+          },
+          "next": null
+        },
+        {
+          "id": "5",
+          "text": "Strongly agree",
+          "weights_raw": "authority_internal:+2,expression_ethics_first:+2",
+          "weights": {
+            "authority_internal": 2,
+            "expression_ethics_first": 2
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "C08",
+      "track": "Core",
+      "domain": "Meaning",
+      "item_type": "Forced choice",
+      "prompt": "In conversations about spirituality, you’re usually more interested in…",
+      "labels": "A/B",
+      "response_type": "A|B",
+      "adaptive_rule": null,
+      "notes": null,
+      "options": [
+        {
+          "id": "A",
+          "text": "How ideas shape human life and ethics.",
+          "weights_raw": "meaning_pragmatic:+1,expression_ethics_first:+1",
+          "weights": {
+            "meaning_pragmatic": 1,
+            "expression_ethics_first": 1
+          },
+          "next": null
+        },
+        {
+          "id": "B",
+          "text": "How ideas describe ultimate reality.",
+          "weights_raw": "meaning_literal:+1,transcendence_openness:+1",
+          "weights": {
+            "meaning_literal": 1,
+            "transcendence_openness": 1
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "C09",
+      "track": "Core",
+      "domain": "Authority",
+      "item_type": "Forced choice",
+      "prompt": "When deciding what is right or true, you tend to rely most on…",
+      "labels": "A/B",
+      "response_type": "A|B",
+      "adaptive_rule": null,
+      "notes": null,
+      "options": [
+        {
+          "id": "A",
+          "text": "Your own judgment shaped by experience, reflection, and consequences.",
+          "weights_raw": "authority_internal:+2,authority_science_reason:+1",
+          "weights": {
+            "authority_internal": 2,
+            "authority_science_reason": 1
+          },
+          "next": null
+        },
+        {
+          "id": "B",
+          "text": "Dialogue with trusted people/communities, then deciding what fits with integrity.",
+          "weights_raw": "authority_relational:+2,authority_internal:+1",
+          "weights": {
+            "authority_relational": 2,
+            "authority_internal": 1
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "C10",
+      "track": "Core",
+      "domain": "Authority",
+      "item_type": "Likert-5",
+      "prompt": "I trust evidence and reason as essential guides for what I believe and how I live.",
+      "labels": "1 Strongly disagree | 2 Disagree | 3 Neutral | 4 Agree | 5 Strongly agree",
+      "response_type": "1-5",
+      "adaptive_rule": null,
+      "notes": "Likert scoring: -2,-1,0,+1,+2 multiplied by unit weights: {'authority_science_reason': 1}.  Structured options generated from unit weights.",
+      "options": [
+        {
+          "id": "1",
+          "text": "Strongly disagree",
+          "weights_raw": "authority_science_reason:-2",
+          "weights": {
+            "authority_science_reason": -2
+          },
+          "next": null
+        },
+        {
+          "id": "2",
+          "text": "Disagree",
+          "weights_raw": "authority_science_reason:-1",
+          "weights": {
+            "authority_science_reason": -1
+          },
+          "next": null
+        },
+        {
+          "id": "3",
+          "text": "Neutral",
+          "weights_raw": "",
+          "weights": {
+            "authority_science_reason": 0
+          },
+          "next": null
+        },
+        {
+          "id": "4",
+          "text": "Agree",
+          "weights_raw": "authority_science_reason:+1",
+          "weights": {
+            "authority_science_reason": 1
+          },
+          "next": null
+        },
+        {
+          "id": "5",
+          "text": "Strongly agree",
+          "weights_raw": "authority_science_reason:+2",
+          "weights": {
+            "authority_science_reason": 2
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "C11",
+      "track": "Core",
+      "domain": "Authority",
+      "item_type": "Multiple choice",
+      "prompt": "When sacred texts are involved, you’re currently closer to…",
+      "labels": "A | B | C | D",
+      "response_type": "A / B / C / D",
+      "adaptive_rule": null,
+      "notes": "Branches to text detail if engaged.",
+      "options": [
+        {
+          "id": "A",
+          "text": "I still draw wisdom from them, but I interpret them symbolically.",
+          "weights_raw": "authority_text:+2,meaning_symbolic:+1",
+          "weights": {
+            "authority_text": 2,
+            "meaning_symbolic": 1
+          },
+          "next": null
+        },
+        {
+          "id": "B",
+          "text": "I’m unsure; I want to engage them carefully without giving them final authority.",
+          "weights_raw": "authority_text:+1,belief_suspend:+1",
+          "weights": {
+            "authority_text": 1,
+            "belief_suspend": 1
+          },
+          "next": null
+        },
+        {
+          "id": "C",
+          "text": "I’m mostly disengaged from them right now.",
+          "weights_raw": "authority_text:-1,belief_reject:+1",
+          "weights": {
+            "authority_text": -1,
+            "belief_reject": 1
+          },
+          "next": null
+        },
+        {
+          "id": "D",
+          "text": "I feel anxious around them and avoid them when possible.",
+          "weights_raw": "system_distrust_sensitivity:+2,authority_text:-2",
+          "weights": {
+            "system_distrust_sensitivity": 2,
+            "authority_text": -2
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "C12",
+      "track": "Core",
+      "domain": "Authority",
+      "item_type": "Forced choice",
+      "prompt": "When you do engage a sacred text (even occasionally), you are usually closer to…",
+      "labels": "A/B",
+      "response_type": "A|B",
+      "adaptive_rule": null,
+      "notes": null,
+      "options": [
+        {
+          "id": "A",
+          "text": "Reading for wisdom and ethical direction, even if historically messy.",
+          "weights_raw": "meaning_symbolic:+1,authority_text:+1,expression_ethics_first:+1",
+          "weights": {
+            "meaning_symbolic": 1,
+            "authority_text": 1,
+            "expression_ethics_first": 1
+          },
+          "next": null
+        },
+        {
+          "id": "B",
+          "text": "Reading to decide what must be believed or obeyed.",
+          "weights_raw": "meaning_literal:+2,authority_text:+1",
+          "weights": {
+            "meaning_literal": 2,
+            "authority_text": 1
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "C13",
+      "track": "Core",
+      "domain": "Authority",
+      "item_type": "Forced choice",
+      "prompt": "When you think about authority, your body often feels…",
+      "labels": "A/B",
+      "response_type": "A|B",
+      "adaptive_rule": null,
+      "notes": null,
+      "options": [
+        {
+          "id": "A",
+          "text": "Tense; you’re alert for manipulation or shame.",
+          "weights_raw": "system_distrust_sensitivity:+2",
+          "weights": {
+            "system_distrust_sensitivity": 2
+          },
+          "next": null
+        },
+        {
+          "id": "B",
+          "text": "Neutral; authority can be helpful if accountable.",
+          "weights_raw": "system_distrust_sensitivity:-1,authority_relational:+1",
+          "weights": {
+            "system_distrust_sensitivity": -1,
+            "authority_relational": 1
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "C14",
+      "track": "Core",
+      "domain": "Authority",
+      "item_type": "Likert-5",
+      "prompt": "It matters to me that my beliefs can change when new evidence or insight emerges.",
+      "labels": "1 Strongly disagree | 2 Disagree | 3 Neutral | 4 Agree | 5 Strongly agree",
+      "response_type": "1-5",
+      "adaptive_rule": null,
+      "notes": "Likert scoring: -2,-1,0,+1,+2 multiplied by unit weights: {'uncertainty_comfort': 1, 'belief_suspend': 1, 'authority_internal': 1}.  Structured options generated from unit weights.",
+      "options": [
+        {
+          "id": "1",
+          "text": "Strongly disagree",
+          "weights_raw": "uncertainty_comfort:-2,belief_suspend:-2,authority_internal:-2",
+          "weights": {
+            "uncertainty_comfort": -2,
+            "belief_suspend": -2,
+            "authority_internal": -2
+          },
+          "next": null
+        },
+        {
+          "id": "2",
+          "text": "Disagree",
+          "weights_raw": "uncertainty_comfort:-1,belief_suspend:-1,authority_internal:-1",
+          "weights": {
+            "uncertainty_comfort": -1,
+            "belief_suspend": -1,
+            "authority_internal": -1
+          },
+          "next": null
+        },
+        {
+          "id": "3",
+          "text": "Neutral",
+          "weights_raw": "",
+          "weights": {
+            "uncertainty_comfort": 0,
+            "belief_suspend": 0,
+            "authority_internal": 0
+          },
+          "next": null
+        },
+        {
+          "id": "4",
+          "text": "Agree",
+          "weights_raw": "uncertainty_comfort:+1,belief_suspend:+1,authority_internal:+1",
+          "weights": {
+            "uncertainty_comfort": 1,
+            "belief_suspend": 1,
+            "authority_internal": 1
+          },
+          "next": null
+        },
+        {
+          "id": "5",
+          "text": "Strongly agree",
+          "weights_raw": "uncertainty_comfort:+2,belief_suspend:+2,authority_internal:+2",
+          "weights": {
+            "uncertainty_comfort": 2,
+            "belief_suspend": 2,
+            "authority_internal": 2
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "C15",
+      "track": "Core",
+      "domain": "Authority",
+      "item_type": "Forced choice",
+      "prompt": "If you keep anything from your religious past, you want it to be…",
+      "labels": "A/B",
+      "response_type": "A|B",
+      "adaptive_rule": null,
+      "notes": null,
+      "options": [
+        {
+          "id": "A",
+          "text": "Reinterpreted in ways that align with dignity, justice, and lived reality.",
+          "weights_raw": "belief_reinterpret:+2,identity_integration:+2,justice_scope_systemic:+1",
+          "weights": {
+            "belief_reinterpret": 2,
+            "identity_integration": 2,
+            "justice_scope_systemic": 1
+          },
+          "next": null
+        },
+        {
+          "id": "B",
+          "text": "Something I can set down entirely without guilt.",
+          "weights_raw": "belief_reject:+2,identity_integration:-1",
+          "weights": {
+            "belief_reject": 2,
+            "identity_integration": -1
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "C16",
+      "track": "Core",
+      "domain": "Moral",
+      "item_type": "Forced choice",
+      "prompt": "When something feels morally urgent, it’s usually because…",
+      "labels": "A/B",
+      "response_type": "A|B",
+      "adaptive_rule": null,
+      "notes": null,
+      "options": [
+        {
+          "id": "A",
+          "text": "Someone is being harmed, excluded, or treated as less than fully human.",
+          "weights_raw": "moral_care_dignity:+2,justice_scope_interpersonal:+1",
+          "weights": {
+            "moral_care_dignity": 2,
+            "justice_scope_interpersonal": 1
+          },
+          "next": null
+        },
+        {
+          "id": "B",
+          "text": "A system predictably produces unfair outcomes or concentrates power.",
+          "weights_raw": "justice_scope_systemic:+2,moral_fairness:+1,moral_care_dignity:+1",
+          "weights": {
+            "justice_scope_systemic": 2,
+            "moral_fairness": 1,
+            "moral_care_dignity": 1
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "C17",
+      "track": "Core",
+      "domain": "Moral",
+      "item_type": "Likert-5",
+      "prompt": "Some values feel non-negotiable for me, even if I avoid rigid belief systems.",
+      "labels": "1 Strongly disagree | 2 Disagree | 3 Neutral | 4 Agree | 5 Strongly agree",
+      "response_type": "1-5",
+      "adaptive_rule": null,
+      "notes": "Likert scoring: -2,-1,0,+1,+2 multiplied by unit weights: {'sacred_values_strength': 1}.  Structured options generated from unit weights.",
+      "options": [
+        {
+          "id": "1",
+          "text": "Strongly disagree",
+          "weights_raw": "sacred_values_strength:-2",
+          "weights": {
+            "sacred_values_strength": -2
+          },
+          "next": null
+        },
+        {
+          "id": "2",
+          "text": "Disagree",
+          "weights_raw": "sacred_values_strength:-1",
+          "weights": {
+            "sacred_values_strength": -1
+          },
+          "next": null
+        },
+        {
+          "id": "3",
+          "text": "Neutral",
+          "weights_raw": "",
+          "weights": {
+            "sacred_values_strength": 0
+          },
+          "next": null
+        },
+        {
+          "id": "4",
+          "text": "Agree",
+          "weights_raw": "sacred_values_strength:+1",
+          "weights": {
+            "sacred_values_strength": 1
+          },
+          "next": null
+        },
+        {
+          "id": "5",
+          "text": "Strongly agree",
+          "weights_raw": "sacred_values_strength:+2",
+          "weights": {
+            "sacred_values_strength": 2
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "C18",
+      "track": "Core",
+      "domain": "Moral",
+      "item_type": "Forced choice",
+      "prompt": "The “Golden Rule” (treat others as you’d want to be treated) feels…",
+      "labels": "A/B",
+      "response_type": "A|B",
+      "adaptive_rule": null,
+      "notes": null,
+      "options": [
+        {
+          "id": "A",
+          "text": "Like a core ethical anchor I still trust.",
+          "weights_raw": "moral_care_dignity:+2,expression_ethics_first:+1",
+          "weights": {
+            "moral_care_dignity": 2,
+            "expression_ethics_first": 1
+          },
+          "next": null
+        },
+        {
+          "id": "B",
+          "text": "Too limited; ethics needs to address power and harm beyond personal reciprocity.",
+          "weights_raw": "justice_scope_systemic:+2,moral_fairness:+1",
+          "weights": {
+            "justice_scope_systemic": 2,
+            "moral_fairness": 1
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "C19",
+      "track": "Core",
+      "domain": "Moral",
+      "item_type": "Likert-5",
+      "prompt": "Fairness matters to me even when it costs me convenience or approval.",
+      "labels": "1 Strongly disagree | 2 Disagree | 3 Neutral | 4 Agree | 5 Strongly agree",
+      "response_type": "1-5",
+      "adaptive_rule": null,
+      "notes": "Likert scoring: -2,-1,0,+1,+2 multiplied by unit weights: {'moral_fairness': 1, 'sacred_values_strength': 1}.  Structured options generated from unit weights.",
+      "options": [
+        {
+          "id": "1",
+          "text": "Strongly disagree",
+          "weights_raw": "moral_fairness:-2,sacred_values_strength:-2",
+          "weights": {
+            "moral_fairness": -2,
+            "sacred_values_strength": -2
+          },
+          "next": null
+        },
+        {
+          "id": "2",
+          "text": "Disagree",
+          "weights_raw": "moral_fairness:-1,sacred_values_strength:-1",
+          "weights": {
+            "moral_fairness": -1,
+            "sacred_values_strength": -1
+          },
+          "next": null
+        },
+        {
+          "id": "3",
+          "text": "Neutral",
+          "weights_raw": "",
+          "weights": {
+            "moral_fairness": 0,
+            "sacred_values_strength": 0
+          },
+          "next": null
+        },
+        {
+          "id": "4",
+          "text": "Agree",
+          "weights_raw": "moral_fairness:+1,sacred_values_strength:+1",
+          "weights": {
+            "moral_fairness": 1,
+            "sacred_values_strength": 1
+          },
+          "next": null
+        },
+        {
+          "id": "5",
+          "text": "Strongly agree",
+          "weights_raw": "moral_fairness:+2,sacred_values_strength:+2",
+          "weights": {
+            "moral_fairness": 2,
+            "sacred_values_strength": 2
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "C20",
+      "track": "Core",
+      "domain": "Moral",
+      "item_type": "Multiple choice",
+      "prompt": "When you feel outrage, it’s most often about…",
+      "labels": "A | B | C | D",
+      "response_type": "A / B / C / D",
+      "adaptive_rule": null,
+      "notes": null,
+      "options": [
+        {
+          "id": "A",
+          "text": "Cruelty or dehumanization.",
+          "weights_raw": "moral_care_dignity:+2",
+          "weights": {
+            "moral_care_dignity": 2
+          },
+          "next": null
+        },
+        {
+          "id": "B",
+          "text": "Hypocrisy or abuse of power.",
+          "weights_raw": "justice_scope_systemic:+2",
+          "weights": {
+            "justice_scope_systemic": 2
+          },
+          "next": null
+        },
+        {
+          "id": "C",
+          "text": "Betrayal or disloyalty.",
+          "weights_raw": "moral_loyalty_order:+2",
+          "weights": {
+            "moral_loyalty_order": 2
+          },
+          "next": null
+        },
+        {
+          "id": "D",
+          "text": "It varies; I notice patterns but try not to live in outrage.",
+          "weights_raw": "belief_suspend:+1,uncertainty_comfort:+1",
+          "weights": {
+            "belief_suspend": 1,
+            "uncertainty_comfort": 1
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "C21",
+      "track": "Core",
+      "domain": "Moral",
+      "item_type": "Likert-5",
+      "prompt": "My ethics are stronger when they show up in my daily behavior, not just in what I believe.",
+      "labels": "1 Strongly disagree | 2 Disagree | 3 Neutral | 4 Agree | 5 Strongly agree",
+      "response_type": "1-5",
+      "adaptive_rule": null,
+      "notes": "Likert scoring: -2,-1,0,+1,+2 multiplied by unit weights: {'expression_ethics_first': 1}.  Structured options generated from unit weights.",
+      "options": [
+        {
+          "id": "1",
+          "text": "Strongly disagree",
+          "weights_raw": "expression_ethics_first:-2",
+          "weights": {
+            "expression_ethics_first": -2
+          },
+          "next": null
+        },
+        {
+          "id": "2",
+          "text": "Disagree",
+          "weights_raw": "expression_ethics_first:-1",
+          "weights": {
+            "expression_ethics_first": -1
+          },
+          "next": null
+        },
+        {
+          "id": "3",
+          "text": "Neutral",
+          "weights_raw": "",
+          "weights": {
+            "expression_ethics_first": 0
+          },
+          "next": null
+        },
+        {
+          "id": "4",
+          "text": "Agree",
+          "weights_raw": "expression_ethics_first:+1",
+          "weights": {
+            "expression_ethics_first": 1
+          },
+          "next": null
+        },
+        {
+          "id": "5",
+          "text": "Strongly agree",
+          "weights_raw": "expression_ethics_first:+2",
+          "weights": {
+            "expression_ethics_first": 2
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "C22",
+      "track": "Core",
+      "domain": "Practice",
+      "item_type": "Forced choice",
+      "prompt": "Right now, what feels most grounding is…",
+      "labels": "A/B",
+      "response_type": "A|B",
+      "adaptive_rule": null,
+      "notes": null,
+      "options": [
+        {
+          "id": "A",
+          "text": "Clear ethical action aligned with my values.",
+          "weights_raw": "expression_ethics_first:+2,practice_action_first:+2",
+          "weights": {
+            "expression_ethics_first": 2,
+            "practice_action_first": 2
+          },
+          "next": null
+        },
+        {
+          "id": "B",
+          "text": "A reflective or contemplative practice that helps me reset.",
+          "weights_raw": "practice_readiness:+1,practice_low_pressure:+2",
+          "weights": {
+            "practice_readiness": 1,
+            "practice_low_pressure": 2
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "C23",
+      "track": "Core",
+      "domain": "Practice",
+      "item_type": "Likert-5",
+      "prompt": "I miss rhythm, ritual, or marking time, even if I don’t want belief enforcement.",
+      "labels": "1 Strongly disagree | 2 Disagree | 3 Neutral | 4 Agree | 5 Strongly agree",
+      "response_type": "1-5",
+      "adaptive_rule": null,
+      "notes": "Likert scoring: -2,-1,0,+1,+2 multiplied by unit weights: {'expression_ritual_rhythm': 1}.  Structured options generated from unit weights.",
+      "options": [
+        {
+          "id": "1",
+          "text": "Strongly disagree",
+          "weights_raw": "expression_ritual_rhythm:-2",
+          "weights": {
+            "expression_ritual_rhythm": -2
+          },
+          "next": null
+        },
+        {
+          "id": "2",
+          "text": "Disagree",
+          "weights_raw": "expression_ritual_rhythm:-1",
+          "weights": {
+            "expression_ritual_rhythm": -1
+          },
+          "next": null
+        },
+        {
+          "id": "3",
+          "text": "Neutral",
+          "weights_raw": "",
+          "weights": {
+            "expression_ritual_rhythm": 0
+          },
+          "next": null
+        },
+        {
+          "id": "4",
+          "text": "Agree",
+          "weights_raw": "expression_ritual_rhythm:+1",
+          "weights": {
+            "expression_ritual_rhythm": 1
+          },
+          "next": null
+        },
+        {
+          "id": "5",
+          "text": "Strongly agree",
+          "weights_raw": "expression_ritual_rhythm:+2",
+          "weights": {
+            "expression_ritual_rhythm": 2
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "C24",
+      "track": "Core",
+      "domain": "Practice",
+      "item_type": "Forced choice",
+      "prompt": "If you try a practice, it needs to feel…",
+      "labels": "A/B",
+      "response_type": "A|B",
+      "adaptive_rule": null,
+      "notes": null,
+      "options": [
+        {
+          "id": "A",
+          "text": "Flexible and low-pressure, with no belief requirements.",
+          "weights_raw": "practice_low_pressure:+2,system_distrust_sensitivity:+1",
+          "weights": {
+            "practice_low_pressure": 2,
+            "system_distrust_sensitivity": 1
+          },
+          "next": null
+        },
+        {
+          "id": "B",
+          "text": "Structured and consistent to be effective.",
+          "weights_raw": "structure_preference:+2,practice_readiness:+1",
+          "weights": {
+            "structure_preference": 2,
+            "practice_readiness": 1
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "C25",
+      "track": "Core",
+      "domain": "Practice",
+      "item_type": "Multiple choice",
+      "prompt": "Community, for you right now, feels closest to…",
+      "labels": "A | B | C | D",
+      "response_type": "A / B / C / D",
+      "adaptive_rule": null,
+      "notes": "Used for surfacing community-forward vs private practice suggestions.",
+      "options": [
+        {
+          "id": "A",
+          "text": "Helpful, but I need it to be low-pressure and non-hierarchical.",
+          "weights_raw": "authority_relational:+1,system_distrust_sensitivity:+1",
+          "weights": {
+            "authority_relational": 1,
+            "system_distrust_sensitivity": 1
+          },
+          "next": null
+        },
+        {
+          "id": "B",
+          "text": "Essential; I find meaning through shared life and accountability.",
+          "weights_raw": "authority_relational:+2,practice_readiness:+1",
+          "weights": {
+            "authority_relational": 2,
+            "practice_readiness": 1
+          },
+          "next": null
+        },
+        {
+          "id": "C",
+          "text": "Optional; I’m rebuilding privately first.",
+          "weights_raw": "authority_internal:+1,practice_low_pressure:+1",
+          "weights": {
+            "authority_internal": 1,
+            "practice_low_pressure": 1
+          },
+          "next": null
+        },
+        {
+          "id": "D",
+          "text": "Complicated; community has been a site of harm.",
+          "weights_raw": "system_distrust_sensitivity:+2",
+          "weights": {
+            "system_distrust_sensitivity": 2
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "E01",
+      "track": "Extended",
+      "domain": "Meaning",
+      "item_type": "Likert-5",
+      "prompt": "I can hold both skepticism and openness at the same time without feeling like I’m betraying myself.",
+      "labels": "1 Strongly disagree | 2 Disagree | 3 Neutral | 4 Agree | 5 Strongly agree",
+      "response_type": "1-5",
+      "adaptive_rule": null,
+      "notes": "Likert scoring: -2,-1,0,+1,+2 multiplied by unit weights: {'uncertainty_comfort': 1, 'belief_suspend': 1}.  Structured options generated from unit weights.",
+      "options": [
+        {
+          "id": "1",
+          "text": "Strongly disagree",
+          "weights_raw": "uncertainty_comfort:-2,belief_suspend:-2",
+          "weights": {
+            "uncertainty_comfort": -2,
+            "belief_suspend": -2
+          },
+          "next": null
+        },
+        {
+          "id": "2",
+          "text": "Disagree",
+          "weights_raw": "uncertainty_comfort:-1,belief_suspend:-1",
+          "weights": {
+            "uncertainty_comfort": -1,
+            "belief_suspend": -1
+          },
+          "next": null
+        },
+        {
+          "id": "3",
+          "text": "Neutral",
+          "weights_raw": "",
+          "weights": {
+            "uncertainty_comfort": 0,
+            "belief_suspend": 0
+          },
+          "next": null
+        },
+        {
+          "id": "4",
+          "text": "Agree",
+          "weights_raw": "uncertainty_comfort:+1,belief_suspend:+1",
+          "weights": {
+            "uncertainty_comfort": 1,
+            "belief_suspend": 1
+          },
+          "next": null
+        },
+        {
+          "id": "5",
+          "text": "Strongly agree",
+          "weights_raw": "uncertainty_comfort:+2,belief_suspend:+2",
+          "weights": {
+            "uncertainty_comfort": 2,
+            "belief_suspend": 2
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "E02",
+      "track": "Extended",
+      "domain": "Meaning",
+      "item_type": "Forced choice",
+      "prompt": "When a religious teaching conflicts with lived reality, you are usually closer to…",
+      "labels": "A/B",
+      "response_type": "A|B",
+      "adaptive_rule": null,
+      "notes": null,
+      "options": [
+        {
+          "id": "A",
+          "text": "Re-evaluating the teaching.",
+          "weights_raw": "belief_reinterpret:+2,authority_internal:+1",
+          "weights": {
+            "belief_reinterpret": 2,
+            "authority_internal": 1
+          },
+          "next": null
+        },
+        {
+          "id": "B",
+          "text": "Re-evaluating your own interpretation and searching for a better reading.",
+          "weights_raw": "belief_reinterpret:+2,authority_text:+1,meaning_symbolic:+1",
+          "weights": {
+            "belief_reinterpret": 2,
+            "authority_text": 1,
+            "meaning_symbolic": 1
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "E03",
+      "track": "Extended",
+      "domain": "Meaning",
+      "item_type": "Multiple choice",
+      "prompt": "What role does “mystery” play for you right now?",
+      "labels": "A | B | C | D",
+      "response_type": "A / B / C / D",
+      "adaptive_rule": null,
+      "notes": null,
+      "options": [
+        {
+          "id": "A",
+          "text": "Central: some things are meant to remain open.",
+          "weights_raw": "uncertainty_comfort:+2",
+          "weights": {
+            "uncertainty_comfort": 2
+          },
+          "next": null
+        },
+        {
+          "id": "B",
+          "text": "Useful: mystery is fine as long as it doesn’t excuse harm.",
+          "weights_raw": "meaning_pragmatic:+2",
+          "weights": {
+            "meaning_pragmatic": 2
+          },
+          "next": null
+        },
+        {
+          "id": "C",
+          "text": "Frustrating: I want answers.",
+          "weights_raw": "meaning_literal:+1,structure_preference:+1",
+          "weights": {
+            "meaning_literal": 1,
+            "structure_preference": 1
+          },
+          "next": null
+        },
+        {
+          "id": "D",
+          "text": "Neutral: I don’t spend much time on it.",
+          "weights_raw": "practice_action_first:+1",
+          "weights": {
+            "practice_action_first": 1
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "E04",
+      "track": "Extended",
+      "domain": "Meaning",
+      "item_type": "Likert-5",
+      "prompt": "I’m able to find meaning even if I believe humans construct meaning rather than discover it.",
+      "labels": "1 Strongly disagree | 2 Disagree | 3 Neutral | 4 Agree | 5 Strongly agree",
+      "response_type": "1-5",
+      "adaptive_rule": null,
+      "notes": "Likert scoring: -2,-1,0,+1,+2 multiplied by unit weights: {'meaning_pragmatic': 1, 'belief_suspend': 1}.  Structured options generated from unit weights.",
+      "options": [
+        {
+          "id": "1",
+          "text": "Strongly disagree",
+          "weights_raw": "meaning_pragmatic:-2,belief_suspend:-2",
+          "weights": {
+            "meaning_pragmatic": -2,
+            "belief_suspend": -2
+          },
+          "next": null
+        },
+        {
+          "id": "2",
+          "text": "Disagree",
+          "weights_raw": "meaning_pragmatic:-1,belief_suspend:-1",
+          "weights": {
+            "meaning_pragmatic": -1,
+            "belief_suspend": -1
+          },
+          "next": null
+        },
+        {
+          "id": "3",
+          "text": "Neutral",
+          "weights_raw": "",
+          "weights": {
+            "meaning_pragmatic": 0,
+            "belief_suspend": 0
+          },
+          "next": null
+        },
+        {
+          "id": "4",
+          "text": "Agree",
+          "weights_raw": "meaning_pragmatic:+1,belief_suspend:+1",
+          "weights": {
+            "meaning_pragmatic": 1,
+            "belief_suspend": 1
+          },
+          "next": null
+        },
+        {
+          "id": "5",
+          "text": "Strongly agree",
+          "weights_raw": "meaning_pragmatic:+2,belief_suspend:+2",
+          "weights": {
+            "meaning_pragmatic": 2,
+            "belief_suspend": 2
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "E05",
+      "track": "Extended",
+      "domain": "Meaning",
+      "item_type": "Forced choice",
+      "prompt": "When you hear testimonies of certainty, you tend to feel…",
+      "labels": "A/B",
+      "response_type": "A|B",
+      "adaptive_rule": null,
+      "notes": null,
+      "options": [
+        {
+          "id": "A",
+          "text": "Skeptical; certainty can be a mask for fear or power.",
+          "weights_raw": "system_distrust_sensitivity:+1,uncertainty_comfort:+1",
+          "weights": {
+            "system_distrust_sensitivity": 1,
+            "uncertainty_comfort": 1
+          },
+          "next": null
+        },
+        {
+          "id": "B",
+          "text": "Curious; maybe they’ve found something you haven’t.",
+          "weights_raw": "authority_relational:+1,transcendence_openness:+1",
+          "weights": {
+            "authority_relational": 1,
+            "transcendence_openness": 1
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "E06",
+      "track": "Extended",
+      "domain": "Meaning",
+      "item_type": "Likert-5",
+      "prompt": "I’m comfortable treating multiple traditions as conversation partners without needing one final system.",
+      "labels": "1 Strongly disagree | 2 Disagree | 3 Neutral | 4 Agree | 5 Strongly agree",
+      "response_type": "1-5",
+      "adaptive_rule": null,
+      "notes": "Likert scoring: -2,-1,0,+1,+2 multiplied by unit weights: {'identity_integration': 1, 'uncertainty_comfort': 1}.  Structured options generated from unit weights.",
+      "options": [
+        {
+          "id": "1",
+          "text": "Strongly disagree",
+          "weights_raw": "identity_integration:-2,uncertainty_comfort:-2",
+          "weights": {
+            "identity_integration": -2,
+            "uncertainty_comfort": -2
+          },
+          "next": null
+        },
+        {
+          "id": "2",
+          "text": "Disagree",
+          "weights_raw": "identity_integration:-1,uncertainty_comfort:-1",
+          "weights": {
+            "identity_integration": -1,
+            "uncertainty_comfort": -1
+          },
+          "next": null
+        },
+        {
+          "id": "3",
+          "text": "Neutral",
+          "weights_raw": "",
+          "weights": {
+            "identity_integration": 0,
+            "uncertainty_comfort": 0
+          },
+          "next": null
+        },
+        {
+          "id": "4",
+          "text": "Agree",
+          "weights_raw": "identity_integration:+1,uncertainty_comfort:+1",
+          "weights": {
+            "identity_integration": 1,
+            "uncertainty_comfort": 1
+          },
+          "next": null
+        },
+        {
+          "id": "5",
+          "text": "Strongly agree",
+          "weights_raw": "identity_integration:+2,uncertainty_comfort:+2",
+          "weights": {
+            "identity_integration": 2,
+            "uncertainty_comfort": 2
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "E07",
+      "track": "Extended",
+      "domain": "Meaning",
+      "item_type": "Forced choice",
+      "prompt": "Right now, meaning comes most from…",
+      "labels": "A/B",
+      "response_type": "A|B",
+      "adaptive_rule": null,
+      "notes": null,
+      "options": [
+        {
+          "id": "A",
+          "text": "Relationships and care.",
+          "weights_raw": "moral_care_dignity:+1,authority_relational:+1",
+          "weights": {
+            "moral_care_dignity": 1,
+            "authority_relational": 1
+          },
+          "next": null
+        },
+        {
+          "id": "B",
+          "text": "Work, service, or impact.",
+          "weights_raw": "meaning_pragmatic:+1,practice_action_first:+1",
+          "weights": {
+            "meaning_pragmatic": 1,
+            "practice_action_first": 1
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "E08",
+      "track": "Extended",
+      "domain": "Meaning",
+      "item_type": "Likert-5",
+      "prompt": "I still resonate with some language of prayer, even if I define it differently than I used to.",
+      "labels": "1 Strongly disagree | 2 Disagree | 3 Neutral | 4 Agree | 5 Strongly agree",
+      "response_type": "1-5",
+      "adaptive_rule": null,
+      "notes": "Likert scoring: -2,-1,0,+1,+2 multiplied by unit weights: {'authority_text': 1, 'identity_integration': 1}.  Structured options generated from unit weights.",
+      "options": [
+        {
+          "id": "1",
+          "text": "Strongly disagree",
+          "weights_raw": "authority_text:-2,identity_integration:-2",
+          "weights": {
+            "authority_text": -2,
+            "identity_integration": -2
+          },
+          "next": null
+        },
+        {
+          "id": "2",
+          "text": "Disagree",
+          "weights_raw": "authority_text:-1,identity_integration:-1",
+          "weights": {
+            "authority_text": -1,
+            "identity_integration": -1
+          },
+          "next": null
+        },
+        {
+          "id": "3",
+          "text": "Neutral",
+          "weights_raw": "",
+          "weights": {
+            "authority_text": 0,
+            "identity_integration": 0
+          },
+          "next": null
+        },
+        {
+          "id": "4",
+          "text": "Agree",
+          "weights_raw": "authority_text:+1,identity_integration:+1",
+          "weights": {
+            "authority_text": 1,
+            "identity_integration": 1
+          },
+          "next": null
+        },
+        {
+          "id": "5",
+          "text": "Strongly agree",
+          "weights_raw": "authority_text:+2,identity_integration:+2",
+          "weights": {
+            "authority_text": 2,
+            "identity_integration": 2
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "E09",
+      "track": "Extended",
+      "domain": "Authority",
+      "item_type": "Likert-5",
+      "prompt": "I can engage a sacred text without treating it as a weapon or a rulebook.",
+      "labels": "1 Strongly disagree | 2 Disagree | 3 Neutral | 4 Agree | 5 Strongly agree",
+      "response_type": "1-5",
+      "adaptive_rule": null,
+      "notes": "Likert scoring: -2,-1,0,+1,+2 multiplied by unit weights: {'authority_text': 1, 'meaning_symbolic': 1, 'system_distrust_sensitivity': 1}.  Structured options generated from unit weights.",
+      "options": [
+        {
+          "id": "1",
+          "text": "Strongly disagree",
+          "weights_raw": "authority_text:-2,meaning_symbolic:-2,system_distrust_sensitivity:-2",
+          "weights": {
+            "authority_text": -2,
+            "meaning_symbolic": -2,
+            "system_distrust_sensitivity": -2
+          },
+          "next": null
+        },
+        {
+          "id": "2",
+          "text": "Disagree",
+          "weights_raw": "authority_text:-1,meaning_symbolic:-1,system_distrust_sensitivity:-1",
+          "weights": {
+            "authority_text": -1,
+            "meaning_symbolic": -1,
+            "system_distrust_sensitivity": -1
+          },
+          "next": null
+        },
+        {
+          "id": "3",
+          "text": "Neutral",
+          "weights_raw": "",
+          "weights": {
+            "authority_text": 0,
+            "meaning_symbolic": 0,
+            "system_distrust_sensitivity": 0
+          },
+          "next": null
+        },
+        {
+          "id": "4",
+          "text": "Agree",
+          "weights_raw": "authority_text:+1,meaning_symbolic:+1,system_distrust_sensitivity:+1",
+          "weights": {
+            "authority_text": 1,
+            "meaning_symbolic": 1,
+            "system_distrust_sensitivity": 1
+          },
+          "next": null
+        },
+        {
+          "id": "5",
+          "text": "Strongly agree",
+          "weights_raw": "authority_text:+2,meaning_symbolic:+2,system_distrust_sensitivity:+2",
+          "weights": {
+            "authority_text": 2,
+            "meaning_symbolic": 2,
+            "system_distrust_sensitivity": 2
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "E10",
+      "track": "Extended",
+      "domain": "Authority",
+      "item_type": "Forced choice",
+      "prompt": "When you consult a tradition, you’re mainly looking for…",
+      "labels": "A/B",
+      "response_type": "A|B",
+      "adaptive_rule": null,
+      "notes": null,
+      "options": [
+        {
+          "id": "A",
+          "text": "Wisdom and perspective to weigh against your values.",
+          "weights_raw": "authority_text:+1,authority_internal:+1",
+          "weights": {
+            "authority_text": 1,
+            "authority_internal": 1
+          },
+          "next": null
+        },
+        {
+          "id": "B",
+          "text": "Rules or certainty to settle the matter.",
+          "weights_raw": "meaning_literal:+1,structure_preference:+2",
+          "weights": {
+            "meaning_literal": 1,
+            "structure_preference": 2
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "E11",
+      "track": "Extended",
+      "domain": "Authority",
+      "item_type": "Likert-5",
+      "prompt": "I’m willing to change my mind when someone I trust shows me a harm I hadn’t considered.",
+      "labels": "1 Strongly disagree | 2 Disagree | 3 Neutral | 4 Agree | 5 Strongly agree",
+      "response_type": "1-5",
+      "adaptive_rule": null,
+      "notes": "Likert scoring: -2,-1,0,+1,+2 multiplied by unit weights: {'authority_relational': 1, 'moral_care_dignity': 1, 'justice_scope_systemic': 1}.  Structured options generated from unit weights.",
+      "options": [
+        {
+          "id": "1",
+          "text": "Strongly disagree",
+          "weights_raw": "authority_relational:-2,moral_care_dignity:-2,justice_scope_systemic:-2",
+          "weights": {
+            "authority_relational": -2,
+            "moral_care_dignity": -2,
+            "justice_scope_systemic": -2
+          },
+          "next": null
+        },
+        {
+          "id": "2",
+          "text": "Disagree",
+          "weights_raw": "authority_relational:-1,moral_care_dignity:-1,justice_scope_systemic:-1",
+          "weights": {
+            "authority_relational": -1,
+            "moral_care_dignity": -1,
+            "justice_scope_systemic": -1
+          },
+          "next": null
+        },
+        {
+          "id": "3",
+          "text": "Neutral",
+          "weights_raw": "",
+          "weights": {
+            "authority_relational": 0,
+            "moral_care_dignity": 0,
+            "justice_scope_systemic": 0
+          },
+          "next": null
+        },
+        {
+          "id": "4",
+          "text": "Agree",
+          "weights_raw": "authority_relational:+1,moral_care_dignity:+1,justice_scope_systemic:+1",
+          "weights": {
+            "authority_relational": 1,
+            "moral_care_dignity": 1,
+            "justice_scope_systemic": 1
+          },
+          "next": null
+        },
+        {
+          "id": "5",
+          "text": "Strongly agree",
+          "weights_raw": "authority_relational:+2,moral_care_dignity:+2,justice_scope_systemic:+2",
+          "weights": {
+            "authority_relational": 2,
+            "moral_care_dignity": 2,
+            "justice_scope_systemic": 2
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "E12",
+      "track": "Extended",
+      "domain": "Authority",
+      "item_type": "Multiple choice",
+      "prompt": "Which source feels most trustworthy when you’re stuck?",
+      "labels": "A | B | C | D",
+      "response_type": "A / B / C / D",
+      "adaptive_rule": null,
+      "notes": null,
+      "options": [
+        {
+          "id": "A",
+          "text": "Evidence and research.",
+          "weights_raw": "authority_science_reason:+2",
+          "weights": {
+            "authority_science_reason": 2
+          },
+          "next": null
+        },
+        {
+          "id": "B",
+          "text": "Lived experience (yours or others’).",
+          "weights_raw": "authority_internal:+1,authority_relational:+1",
+          "weights": {
+            "authority_internal": 1,
+            "authority_relational": 1
+          },
+          "next": null
+        },
+        {
+          "id": "C",
+          "text": "A tradition or text interpreted carefully.",
+          "weights_raw": "authority_text:+2,meaning_symbolic:+1",
+          "weights": {
+            "authority_text": 2,
+            "meaning_symbolic": 1
+          },
+          "next": null
+        },
+        {
+          "id": "D",
+          "text": "Time and reflection; I don’t force closure.",
+          "weights_raw": "belief_suspend:+2,uncertainty_comfort:+1",
+          "weights": {
+            "belief_suspend": 2,
+            "uncertainty_comfort": 1
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "E13",
+      "track": "Extended",
+      "domain": "Authority",
+      "item_type": "Likert-5",
+      "prompt": "I’m sensitive to shame-based messaging and it makes me disengage quickly.",
+      "labels": "1 Strongly disagree | 2 Disagree | 3 Neutral | 4 Agree | 5 Strongly agree",
+      "response_type": "1-5",
+      "adaptive_rule": null,
+      "notes": "Likert scoring: -2,-1,0,+1,+2 multiplied by unit weights: {'system_distrust_sensitivity': 1}.  Structured options generated from unit weights.",
+      "options": [
+        {
+          "id": "1",
+          "text": "Strongly disagree",
+          "weights_raw": "system_distrust_sensitivity:-2",
+          "weights": {
+            "system_distrust_sensitivity": -2
+          },
+          "next": null
+        },
+        {
+          "id": "2",
+          "text": "Disagree",
+          "weights_raw": "system_distrust_sensitivity:-1",
+          "weights": {
+            "system_distrust_sensitivity": -1
+          },
+          "next": null
+        },
+        {
+          "id": "3",
+          "text": "Neutral",
+          "weights_raw": "",
+          "weights": {
+            "system_distrust_sensitivity": 0
+          },
+          "next": null
+        },
+        {
+          "id": "4",
+          "text": "Agree",
+          "weights_raw": "system_distrust_sensitivity:+1",
+          "weights": {
+            "system_distrust_sensitivity": 1
+          },
+          "next": null
+        },
+        {
+          "id": "5",
+          "text": "Strongly agree",
+          "weights_raw": "system_distrust_sensitivity:+2",
+          "weights": {
+            "system_distrust_sensitivity": 2
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "E14",
+      "track": "Extended",
+      "domain": "Authority",
+      "item_type": "Forced choice",
+      "prompt": "If a community claims to be “the only true way,” you’re more likely to…",
+      "labels": "A/B",
+      "response_type": "A|B",
+      "adaptive_rule": null,
+      "notes": null,
+      "options": [
+        {
+          "id": "A",
+          "text": "Avoid it.",
+          "weights_raw": "system_distrust_sensitivity:+2,authority_internal:+1",
+          "weights": {
+            "system_distrust_sensitivity": 2,
+            "authority_internal": 1
+          },
+          "next": null
+        },
+        {
+          "id": "B",
+          "text": "Engage briefly but keep strong boundaries.",
+          "weights_raw": "authority_internal:+1,authority_relational:+1,system_distrust_sensitivity:+1",
+          "weights": {
+            "authority_internal": 1,
+            "authority_relational": 1,
+            "system_distrust_sensitivity": 1
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "E15",
+      "track": "Extended",
+      "domain": "Moral",
+      "item_type": "Likert-5",
+      "prompt": "I think ethics should address power, not only personal kindness.",
+      "labels": "1 Strongly disagree | 2 Disagree | 3 Neutral | 4 Agree | 5 Strongly agree",
+      "response_type": "1-5",
+      "adaptive_rule": null,
+      "notes": "Likert scoring: -2,-1,0,+1,+2 multiplied by unit weights: {'justice_scope_systemic': 1, 'moral_fairness': 1}.  Structured options generated from unit weights.",
+      "options": [
+        {
+          "id": "1",
+          "text": "Strongly disagree",
+          "weights_raw": "justice_scope_systemic:-2,moral_fairness:-2",
+          "weights": {
+            "justice_scope_systemic": -2,
+            "moral_fairness": -2
+          },
+          "next": null
+        },
+        {
+          "id": "2",
+          "text": "Disagree",
+          "weights_raw": "justice_scope_systemic:-1,moral_fairness:-1",
+          "weights": {
+            "justice_scope_systemic": -1,
+            "moral_fairness": -1
+          },
+          "next": null
+        },
+        {
+          "id": "3",
+          "text": "Neutral",
+          "weights_raw": "",
+          "weights": {
+            "justice_scope_systemic": 0,
+            "moral_fairness": 0
+          },
+          "next": null
+        },
+        {
+          "id": "4",
+          "text": "Agree",
+          "weights_raw": "justice_scope_systemic:+1,moral_fairness:+1",
+          "weights": {
+            "justice_scope_systemic": 1,
+            "moral_fairness": 1
+          },
+          "next": null
+        },
+        {
+          "id": "5",
+          "text": "Strongly agree",
+          "weights_raw": "justice_scope_systemic:+2,moral_fairness:+2",
+          "weights": {
+            "justice_scope_systemic": 2,
+            "moral_fairness": 2
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "E16",
+      "track": "Extended",
+      "domain": "Moral",
+      "item_type": "Forced choice",
+      "prompt": "When you think about forgiveness, you’re closer to…",
+      "labels": "A/B",
+      "response_type": "A|B",
+      "adaptive_rule": null,
+      "notes": null,
+      "options": [
+        {
+          "id": "A",
+          "text": "A personal practice that can be healing, but not obligatory.",
+          "weights_raw": "moral_care_dignity:+1,belief_suspend:+1",
+          "weights": {
+            "moral_care_dignity": 1,
+            "belief_suspend": 1
+          },
+          "next": null
+        },
+        {
+          "id": "B",
+          "text": "Something that should never bypass accountability or justice.",
+          "weights_raw": "justice_scope_systemic:+2,moral_fairness:+1",
+          "weights": {
+            "justice_scope_systemic": 2,
+            "moral_fairness": 1
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "E17",
+      "track": "Extended",
+      "domain": "Moral",
+      "item_type": "Likert-5",
+      "prompt": "I can hold compassion for individuals while still opposing harmful systems.",
+      "labels": "1 Strongly disagree | 2 Disagree | 3 Neutral | 4 Agree | 5 Strongly agree",
+      "response_type": "1-5",
+      "adaptive_rule": null,
+      "notes": "Likert scoring: -2,-1,0,+1,+2 multiplied by unit weights: {'justice_scope_systemic': 1, 'moral_care_dignity': 1}.  Structured options generated from unit weights.",
+      "options": [
+        {
+          "id": "1",
+          "text": "Strongly disagree",
+          "weights_raw": "justice_scope_systemic:-2,moral_care_dignity:-2",
+          "weights": {
+            "justice_scope_systemic": -2,
+            "moral_care_dignity": -2
+          },
+          "next": null
+        },
+        {
+          "id": "2",
+          "text": "Disagree",
+          "weights_raw": "justice_scope_systemic:-1,moral_care_dignity:-1",
+          "weights": {
+            "justice_scope_systemic": -1,
+            "moral_care_dignity": -1
+          },
+          "next": null
+        },
+        {
+          "id": "3",
+          "text": "Neutral",
+          "weights_raw": "",
+          "weights": {
+            "justice_scope_systemic": 0,
+            "moral_care_dignity": 0
+          },
+          "next": null
+        },
+        {
+          "id": "4",
+          "text": "Agree",
+          "weights_raw": "justice_scope_systemic:+1,moral_care_dignity:+1",
+          "weights": {
+            "justice_scope_systemic": 1,
+            "moral_care_dignity": 1
+          },
+          "next": null
+        },
+        {
+          "id": "5",
+          "text": "Strongly agree",
+          "weights_raw": "justice_scope_systemic:+2,moral_care_dignity:+2",
+          "weights": {
+            "justice_scope_systemic": 2,
+            "moral_care_dignity": 2
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "E18",
+      "track": "Extended",
+      "domain": "Moral",
+      "item_type": "Multiple choice",
+      "prompt": "When moral rules conflict, you tend to prioritize…",
+      "labels": "A | B | C | D",
+      "response_type": "A / B / C / D",
+      "adaptive_rule": null,
+      "notes": null,
+      "options": [
+        {
+          "id": "A",
+          "text": "Reducing harm.",
+          "weights_raw": "moral_care_dignity:+2",
+          "weights": {
+            "moral_care_dignity": 2
+          },
+          "next": null
+        },
+        {
+          "id": "B",
+          "text": "Fairness and equal treatment.",
+          "weights_raw": "moral_fairness:+2",
+          "weights": {
+            "moral_fairness": 2
+          },
+          "next": null
+        },
+        {
+          "id": "C",
+          "text": "Stability and order.",
+          "weights_raw": "moral_loyalty_order:+2",
+          "weights": {
+            "moral_loyalty_order": 2
+          },
+          "next": null
+        },
+        {
+          "id": "D",
+          "text": "Context; I try not to universalize quickly.",
+          "weights_raw": "belief_suspend:+2,uncertainty_comfort:+1",
+          "weights": {
+            "belief_suspend": 2,
+            "uncertainty_comfort": 1
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "E19",
+      "track": "Extended",
+      "domain": "Moral",
+      "item_type": "Likert-5",
+      "prompt": "I want a values-based way to judge my actions without an external judge.",
+      "labels": "1 Strongly disagree | 2 Disagree | 3 Neutral | 4 Agree | 5 Strongly agree",
+      "response_type": "1-5",
+      "adaptive_rule": null,
+      "notes": "Likert scoring: -2,-1,0,+1,+2 multiplied by unit weights: {'authority_internal': 1, 'sacred_values_strength': 1, 'expression_ethics_first': 1}.  Structured options generated from unit weights.",
+      "options": [
+        {
+          "id": "1",
+          "text": "Strongly disagree",
+          "weights_raw": "authority_internal:-2,sacred_values_strength:-2,expression_ethics_first:-2",
+          "weights": {
+            "authority_internal": -2,
+            "sacred_values_strength": -2,
+            "expression_ethics_first": -2
+          },
+          "next": null
+        },
+        {
+          "id": "2",
+          "text": "Disagree",
+          "weights_raw": "authority_internal:-1,sacred_values_strength:-1,expression_ethics_first:-1",
+          "weights": {
+            "authority_internal": -1,
+            "sacred_values_strength": -1,
+            "expression_ethics_first": -1
+          },
+          "next": null
+        },
+        {
+          "id": "3",
+          "text": "Neutral",
+          "weights_raw": "",
+          "weights": {
+            "authority_internal": 0,
+            "sacred_values_strength": 0,
+            "expression_ethics_first": 0
+          },
+          "next": null
+        },
+        {
+          "id": "4",
+          "text": "Agree",
+          "weights_raw": "authority_internal:+1,sacred_values_strength:+1,expression_ethics_first:+1",
+          "weights": {
+            "authority_internal": 1,
+            "sacred_values_strength": 1,
+            "expression_ethics_first": 1
+          },
+          "next": null
+        },
+        {
+          "id": "5",
+          "text": "Strongly agree",
+          "weights_raw": "authority_internal:+2,sacred_values_strength:+2,expression_ethics_first:+2",
+          "weights": {
+            "authority_internal": 2,
+            "sacred_values_strength": 2,
+            "expression_ethics_first": 2
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "E20",
+      "track": "Extended",
+      "domain": "Moral",
+      "item_type": "Forced choice",
+      "prompt": "When someone says “morality is subjective,” you’re closer to…",
+      "labels": "A/B",
+      "response_type": "A|B",
+      "adaptive_rule": null,
+      "notes": null,
+      "options": [
+        {
+          "id": "A",
+          "text": "Some values are human and real even without religion.",
+          "weights_raw": "sacred_values_strength:+2,moral_care_dignity:+1",
+          "weights": {
+            "sacred_values_strength": 2,
+            "moral_care_dignity": 1
+          },
+          "next": null
+        },
+        {
+          "id": "B",
+          "text": "It depends; I’m cautious about claiming universals.",
+          "weights_raw": "belief_suspend:+2,uncertainty_comfort:+1",
+          "weights": {
+            "belief_suspend": 2,
+            "uncertainty_comfort": 1
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "E21",
+      "track": "Extended",
+      "domain": "Practice",
+      "item_type": "Multiple choice",
+      "prompt": "Which kind of practice feels most appealing right now?",
+      "labels": "A | B | C | D",
+      "response_type": "A / B / C / D",
+      "adaptive_rule": null,
+      "notes": null,
+      "options": [
+        {
+          "id": "A",
+          "text": "Silent stillness (e.g., centering prayer without belief pressure).",
+          "weights_raw": "practice_readiness:+1,practice_low_pressure:+2",
+          "weights": {
+            "practice_readiness": 1,
+            "practice_low_pressure": 2
+          },
+          "next": null
+        },
+        {
+          "id": "B",
+          "text": "Body-based grounding (e.g., mindful walking, box breathing).",
+          "weights_raw": "practice_low_pressure:+1,meaning_pragmatic:+1",
+          "weights": {
+            "practice_low_pressure": 1,
+            "meaning_pragmatic": 1
+          },
+          "next": null
+        },
+        {
+          "id": "C",
+          "text": "Journaling for values clarity.",
+          "weights_raw": "authority_internal:+1,practice_low_pressure:+1",
+          "weights": {
+            "authority_internal": 1,
+            "practice_low_pressure": 1
+          },
+          "next": null
+        },
+        {
+          "id": "D",
+          "text": "Service or advocacy as practice.",
+          "weights_raw": "practice_action_first:+2,expression_ethics_first:+1",
+          "weights": {
+            "practice_action_first": 2,
+            "expression_ethics_first": 1
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "E22",
+      "track": "Extended",
+      "domain": "Practice",
+      "item_type": "Likert-5",
+      "prompt": "I’m willing to try a practice once or twice as an experiment, without committing to it.",
+      "labels": "1 Strongly disagree | 2 Disagree | 3 Neutral | 4 Agree | 5 Strongly agree",
+      "response_type": "1-5",
+      "adaptive_rule": null,
+      "notes": "Likert scoring: -2,-1,0,+1,+2 multiplied by unit weights: {'practice_low_pressure': 1, 'practice_readiness': 1}.  Structured options generated from unit weights.",
+      "options": [
+        {
+          "id": "1",
+          "text": "Strongly disagree",
+          "weights_raw": "practice_low_pressure:-2,practice_readiness:-2",
+          "weights": {
+            "practice_low_pressure": -2,
+            "practice_readiness": -2
+          },
+          "next": null
+        },
+        {
+          "id": "2",
+          "text": "Disagree",
+          "weights_raw": "practice_low_pressure:-1,practice_readiness:-1",
+          "weights": {
+            "practice_low_pressure": -1,
+            "practice_readiness": -1
+          },
+          "next": null
+        },
+        {
+          "id": "3",
+          "text": "Neutral",
+          "weights_raw": "",
+          "weights": {
+            "practice_low_pressure": 0,
+            "practice_readiness": 0
+          },
+          "next": null
+        },
+        {
+          "id": "4",
+          "text": "Agree",
+          "weights_raw": "practice_low_pressure:+1,practice_readiness:+1",
+          "weights": {
+            "practice_low_pressure": 1,
+            "practice_readiness": 1
+          },
+          "next": null
+        },
+        {
+          "id": "5",
+          "text": "Strongly agree",
+          "weights_raw": "practice_low_pressure:+2,practice_readiness:+2",
+          "weights": {
+            "practice_low_pressure": 2,
+            "practice_readiness": 2
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "E23",
+      "track": "Extended",
+      "domain": "Practice",
+      "item_type": "Forced choice",
+      "prompt": "When ritual is present, you prefer it to be…",
+      "labels": "A/B",
+      "response_type": "A|B",
+      "adaptive_rule": null,
+      "notes": null,
+      "options": [
+        {
+          "id": "A",
+          "text": "Personal and optional, created or adapted by you.",
+          "weights_raw": "expression_ritual_rhythm:+2,practice_low_pressure:+1",
+          "weights": {
+            "expression_ritual_rhythm": 2,
+            "practice_low_pressure": 1
+          },
+          "next": null
+        },
+        {
+          "id": "B",
+          "text": "Shared and communal, as long as it is consent-based and non-coercive.",
+          "weights_raw": "expression_ritual_rhythm:+2,authority_relational:+1",
+          "weights": {
+            "expression_ritual_rhythm": 2,
+            "authority_relational": 1
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "E24",
+      "track": "Extended",
+      "domain": "Practice",
+      "item_type": "Likert-5",
+      "prompt": "Structure helps me follow through even when motivation is low.",
+      "labels": "1 Strongly disagree | 2 Disagree | 3 Neutral | 4 Agree | 5 Strongly agree",
+      "response_type": "1-5",
+      "adaptive_rule": null,
+      "notes": "Likert scoring: -2,-1,0,+1,+2 multiplied by unit weights: {'structure_preference': 1}.  Structured options generated from unit weights.",
+      "options": [
+        {
+          "id": "1",
+          "text": "Strongly disagree",
+          "weights_raw": "structure_preference:-2",
+          "weights": {
+            "structure_preference": -2
+          },
+          "next": null
+        },
+        {
+          "id": "2",
+          "text": "Disagree",
+          "weights_raw": "structure_preference:-1",
+          "weights": {
+            "structure_preference": -1
+          },
+          "next": null
+        },
+        {
+          "id": "3",
+          "text": "Neutral",
+          "weights_raw": "",
+          "weights": {
+            "structure_preference": 0
+          },
+          "next": null
+        },
+        {
+          "id": "4",
+          "text": "Agree",
+          "weights_raw": "structure_preference:+1",
+          "weights": {
+            "structure_preference": 1
+          },
+          "next": null
+        },
+        {
+          "id": "5",
+          "text": "Strongly agree",
+          "weights_raw": "structure_preference:+2",
+          "weights": {
+            "structure_preference": 2
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "E25",
+      "track": "Extended",
+      "domain": "Practice",
+      "item_type": "Forced choice",
+      "prompt": "If a practice starts to feel like a test of worthiness, you are more likely to…",
+      "labels": "A/B",
+      "response_type": "A|B",
+      "adaptive_rule": null,
+      "notes": null,
+      "options": [
+        {
+          "id": "A",
+          "text": "Stop immediately and protect your autonomy.",
+          "weights_raw": "system_distrust_sensitivity:+2,practice_low_pressure:+1",
+          "weights": {
+            "system_distrust_sensitivity": 2,
+            "practice_low_pressure": 1
+          },
+          "next": null
+        },
+        {
+          "id": "B",
+          "text": "Adjust it until it feels workable again.",
+          "weights_raw": "practice_low_pressure:+1,authority_internal:+1",
+          "weights": {
+            "practice_low_pressure": 1,
+            "authority_internal": 1
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "E26",
+      "track": "Extended",
+      "domain": "Moral",
+      "item_type": "Likert-5",
+      "prompt": "I believe the body should be treated as sacred and kept pure.",
+      "labels": "1 Strongly disagree | 2 Disagree | 3 Neutral | 4 Agree | 5 Strongly agree",
+      "response_type": "1-5",
+      "adaptive_rule": null,
+      "notes": "Sanctity/Purity foundation measurement",
+      "options": [
+        {
+          "id": "1",
+          "text": "Strongly disagree",
+          "weights_raw": "moral_sanctity_purity:-2",
+          "weights": {
+            "moral_sanctity_purity": -2
+          },
+          "next": null
+        },
+        {
+          "id": "2",
+          "text": "Disagree",
+          "weights_raw": "moral_sanctity_purity:-1",
+          "weights": {
+            "moral_sanctity_purity": -1
+          },
+          "next": null
+        },
+        {
+          "id": "3",
+          "text": "Neutral",
+          "weights_raw": "",
+          "weights": {
+            "moral_sanctity_purity": 0
+          },
+          "next": null
+        },
+        {
+          "id": "4",
+          "text": "Agree",
+          "weights_raw": "moral_sanctity_purity:+1",
+          "weights": {
+            "moral_sanctity_purity": 1
+          },
+          "next": null
+        },
+        {
+          "id": "5",
+          "text": "Strongly agree",
+          "weights_raw": "moral_sanctity_purity:+2",
+          "weights": {
+            "moral_sanctity_purity": 2
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "E27",
+      "track": "Extended",
+      "domain": "Moral",
+      "item_type": "Likert-5",
+      "prompt": "Some behaviors feel spiritually degrading or polluting.",
+      "labels": "1 Strongly disagree | 2 Disagree | 3 Neutral | 4 Agree | 5 Strongly agree",
+      "response_type": "1-5",
+      "adaptive_rule": null,
+      "notes": "Sanctity/Purity foundation measurement",
+      "options": [
+        {
+          "id": "1",
+          "text": "Strongly disagree",
+          "weights_raw": "moral_sanctity_purity:-2",
+          "weights": {
+            "moral_sanctity_purity": -2
+          },
+          "next": null
+        },
+        {
+          "id": "2",
+          "text": "Disagree",
+          "weights_raw": "moral_sanctity_purity:-1",
+          "weights": {
+            "moral_sanctity_purity": -1
+          },
+          "next": null
+        },
+        {
+          "id": "3",
+          "text": "Neutral",
+          "weights_raw": "",
+          "weights": {
+            "moral_sanctity_purity": 0
+          },
+          "next": null
+        },
+        {
+          "id": "4",
+          "text": "Agree",
+          "weights_raw": "moral_sanctity_purity:+1",
+          "weights": {
+            "moral_sanctity_purity": 1
+          },
+          "next": null
+        },
+        {
+          "id": "5",
+          "text": "Strongly agree",
+          "weights_raw": "moral_sanctity_purity:+2",
+          "weights": {
+            "moral_sanctity_purity": 2
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "E28",
+      "track": "Extended",
+      "domain": "Moral",
+      "item_type": "Likert-5",
+      "prompt": "Living morally requires elevating oneself above base physical desires.",
+      "labels": "1 Strongly disagree | 2 Disagree | 3 Neutral | 4 Agree | 5 Strongly agree",
+      "response_type": "1-5",
+      "adaptive_rule": null,
+      "notes": "Sanctity/Purity foundation measurement",
+      "options": [
+        {
+          "id": "1",
+          "text": "Strongly disagree",
+          "weights_raw": "moral_sanctity_purity:-2",
+          "weights": {
+            "moral_sanctity_purity": -2
+          },
+          "next": null
+        },
+        {
+          "id": "2",
+          "text": "Disagree",
+          "weights_raw": "moral_sanctity_purity:-1",
+          "weights": {
+            "moral_sanctity_purity": -1
+          },
+          "next": null
+        },
+        {
+          "id": "3",
+          "text": "Neutral",
+          "weights_raw": "",
+          "weights": {
+            "moral_sanctity_purity": 0
+          },
+          "next": null
+        },
+        {
+          "id": "4",
+          "text": "Agree",
+          "weights_raw": "moral_sanctity_purity:+1",
+          "weights": {
+            "moral_sanctity_purity": 1
+          },
+          "next": null
+        },
+        {
+          "id": "5",
+          "text": "Strongly agree",
+          "weights_raw": "moral_sanctity_purity:+2",
+          "weights": {
+            "moral_sanctity_purity": 2
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "E29",
+      "track": "Extended",
+      "domain": "Practice",
+      "item_type": "Likert-5",
+      "prompt": "When I face hardship, I try to see it as part of a larger spiritual purpose.",
+      "labels": "1 Strongly disagree | 2 Disagree | 3 Neutral | 4 Agree | 5 Strongly agree",
+      "response_type": "1-5",
+      "adaptive_rule": null,
+      "notes": "Benevolent religious coping measurement",
+      "options": [
+        {
+          "id": "1",
+          "text": "Strongly disagree",
+          "weights_raw": "coping_benevolent_reappraisal:-2",
+          "weights": {
+            "coping_benevolent_reappraisal": -2
+          },
+          "next": null
+        },
+        {
+          "id": "2",
+          "text": "Disagree",
+          "weights_raw": "coping_benevolent_reappraisal:-1",
+          "weights": {
+            "coping_benevolent_reappraisal": -1
+          },
+          "next": null
+        },
+        {
+          "id": "3",
+          "text": "Neutral",
+          "weights_raw": "",
+          "weights": {
+            "coping_benevolent_reappraisal": 0
+          },
+          "next": null
+        },
+        {
+          "id": "4",
+          "text": "Agree",
+          "weights_raw": "coping_benevolent_reappraisal:+1",
+          "weights": {
+            "coping_benevolent_reappraisal": 1
+          },
+          "next": null
+        },
+        {
+          "id": "5",
+          "text": "Strongly agree",
+          "weights_raw": "coping_benevolent_reappraisal:+2",
+          "weights": {
+            "coping_benevolent_reappraisal": 2
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "E30",
+      "track": "Extended",
+      "domain": "Practice",
+      "item_type": "Likert-5",
+      "prompt": "When I face hardship, I wonder if I've done something wrong to deserve it.",
+      "labels": "1 Strongly disagree | 2 Disagree | 3 Neutral | 4 Agree | 5 Strongly agree",
+      "response_type": "1-5",
+      "adaptive_rule": null,
+      "notes": "Punishing religious coping measurement - mental health risk indicator",
+      "options": [
+        {
+          "id": "1",
+          "text": "Strongly disagree",
+          "weights_raw": "coping_punishing_reappraisal:-2",
+          "weights": {
+            "coping_punishing_reappraisal": -2
+          },
+          "next": null
+        },
+        {
+          "id": "2",
+          "text": "Disagree",
+          "weights_raw": "coping_punishing_reappraisal:-1",
+          "weights": {
+            "coping_punishing_reappraisal": -1
+          },
+          "next": null
+        },
+        {
+          "id": "3",
+          "text": "Neutral",
+          "weights_raw": "",
+          "weights": {
+            "coping_punishing_reappraisal": 0
+          },
+          "next": null
+        },
+        {
+          "id": "4",
+          "text": "Agree",
+          "weights_raw": "coping_punishing_reappraisal:+1",
+          "weights": {
+            "coping_punishing_reappraisal": 1
+          },
+          "next": null
+        },
+        {
+          "id": "5",
+          "text": "Strongly agree",
+          "weights_raw": "coping_punishing_reappraisal:+2",
+          "weights": {
+            "coping_punishing_reappraisal": 2
+          },
+          "next": null
+        }
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "key": "P_REFLECTIVE",
+      "name": "Reflective, meaning-oriented",
+      "definition": "Symbolic meaning + internal authority + ambiguity comfort; values clarity through reflection.",
+      "indices_formula": "meaning_symbolic*2 + uncertainty_comfort*1 + authority_internal*1 + belief_reinterpret*1 + practice_low_pressure*1",
+      "primary_emphasis": "Section 1 emphasizes meaning-making and integrity; Section 2 emphasizes care/dignity; Section 3 balances practices + gentle action.",
+      "common_secondary": "P_REINTERPRETING, P_ACTION"
+    },
+    {
+      "key": "P_REINTERPRETING",
+      "name": "Religious language, reinterpreting",
+      "definition": "Text engagement + symbolic interpretation + justice orientation; keeps tradition without hierarchy.",
+      "indices_formula": "authority_text*2 + meaning_symbolic*1 + belief_reinterpret*2 + justice_scope_systemic*1 + authority_internal*1",
+      "primary_emphasis": "Section 1 emphasizes reinterpretation; includes religious history examples/disclaimers; Section 3 includes justice frameworks when systemic high.",
+      "common_secondary": "P_REFLECTIVE, P_ACTION"
+    },
+    {
+      "key": "P_ACTION",
+      "name": "Action-oriented, belief-agnostic",
+      "definition": "Pragmatic meaning + ethics-first + systemic justice; low interest in metaphysics; impact is the anchor.",
+      "indices_formula": "meaning_pragmatic*2 + practice_action_first*2 + expression_ethics_first*1 + justice_scope_systemic*1 + authority_science_reason*1",
+      "primary_emphasis": "Section 1 concise, outcome-based; Section 2 impact-focused; Section 3 action-forward ordering.",
+      "common_secondary": "P_REFLECTIVE"
+    }
+  ],
+  "scoring_rules": [
+    {
+      "id": "R0",
+      "purpose": "Index normalization",
+      "logic": "For each index: normalized = (sum of weighted responses for that index) / (maximum possible absolute score for the answered items contributing to that index). Produces -1..+1. Skipped items do not contribute to denominator.",
+      "effect": "Makes indices comparable across differing question counts and adaptive routing",
+      "notes": "Matches restart prompt math; requires per-item max contribution computed from option weights."
+    },
+    {
+      "id": "R1",
+      "purpose": "Likert conversion",
+      "logic": "Likert 1..5 mapped to -2,-1,0,+1,+2; multiply by unit weights",
+      "effect": "Adds/subtracts to indices",
+      "notes": "Keeps neutrality for midpoints"
+    },
+    {
+      "id": "R2",
+      "purpose": "Primary orientation selection",
+      "logic": "Compute domain composites; choose highest composite as primary",
+      "effect": "Primary label + narrative path",
+      "notes": "Composite definitions in Profiles sheet Primary is highest composite; do not force dominance when very close—use blended language per R3."
+    },
+    {
+      "id": "R3",
+      "purpose": "Secondary resonances",
+      "logic": "Pick up to 2 additional composites within 90% of the primary composite score (i.e., within 10% of the top); allow blended/co-primary language when very close.",
+      "effect": "Adds 'Also resonates' (secondary) lines; up to 3 profiles total displayed.",
+      "notes": "Avoid boxing; blended narrative; aligns with prompt thresholds and cap."
+    },
+    {
+      "id": "R4",
+      "purpose": "Safety tone modifier",
+      "logic": "If system_distrust_sensitivity high, suppress prescriptive language and reduce 'community' surfacing",
+      "effect": "Tone + resource filters",
+      "notes": "Prevents retraumatization"
+    },
+    {
+      "id": "R5",
+      "purpose": "Text engagement routing",
+      "logic": "If authority_text <= -1, avoid text-oriented resources; if >=2, include text reinterpretation suggestions",
+      "effect": "Resource surfacing",
+      "notes": "Matches user preference"
+    },
+    {
+      "id": "R6",
+      "purpose": "Justice resource surfacing",
+      "logic": "If justice_scope_systemic high, include racial/queer/feminist/womanist frameworks as examples",
+      "effect": "Resource surfacing",
+      "notes": "Only when values indicate"
+    },
+    {
+      "id": "R7",
+      "purpose": "Action-first pathway",
+      "logic": "If practice_action_first high, prioritize action resources over contemplative practices",
+      "effect": "Ordering",
+      "notes": "Matches Profile 3"
+    },
+    {
+      "id": "R8",
+      "purpose": "Narrative condition thresholds",
+      "logic": "Interpret narrative_blocks condition tokens using normalized index scores.",
+      "effect": "Makes conditions like '<index> high' and '<index> engaged' computable without inference.",
+      "thresholds": {
+        "high": 0.4,
+        "engaged": 0.2
+      },
+      "notes": "High means normalized score >= 0.40. Engaged means normalized score >= 0.20. Explicit constants for narrative eligibility only; do not alter index scoring."
+    }
+  ],
+  "resource_library": [
+    {
+      "id": "R001",
+      "category": "Ways of Thinking",
+      "name": "Secular humanism",
+      "description": "A life stance that grounds meaning and ethics in human flourishing and responsibility without requiring metaphysical certainty.",
+      "search_terms": [
+        "secular humanism",
+        "humanism ethics"
+      ],
+      "surface_when": "meaning_pragmatic high OR authority_science_reason high",
+      "order_hint": 10,
+      "notes": null
+    },
+    {
+      "id": "R002",
+      "category": "Ways of Thinking",
+      "name": "Virtue ethics",
+      "description": "An approach to ethics that focuses on character and the kinds of habits that form a good life, rather than rule compliance.",
+      "search_terms": [
+        "virtue ethics",
+        "character ethics"
+      ],
+      "surface_when": "expression_ethics_first high",
+      "order_hint": 15,
+      "notes": null
+    },
+    {
+      "id": "R003",
+      "category": "Ways of Thinking",
+      "name": "Narrative ethics",
+      "description": "A way of thinking about morality through stories, identity, and context, emphasizing how lives are shaped over time.",
+      "search_terms": [
+        "narrative ethics",
+        "ethics and storytelling"
+      ],
+      "surface_when": "meaning_symbolic high OR identity_integration high",
+      "order_hint": 18,
+      "notes": null
+    },
+    {
+      "id": "R004",
+      "category": "Ways of Thinking",
+      "name": "Pragmatic ethics",
+      "description": "Evaluates moral choices by consequences and lived impact, often prioritizing harm reduction and workable outcomes.",
+      "search_terms": [
+        "pragmatic ethics",
+        "consequentialism practical"
+      ],
+      "surface_when": "meaning_pragmatic high OR practice_action_first high",
+      "order_hint": 12,
+      "notes": null
+    },
+    {
+      "id": "R005",
+      "category": "Ways of Thinking",
+      "name": "Harm reduction framework",
+      "description": "A practical approach that prioritizes reducing harm in real situations over purity, perfection, or ideology.",
+      "search_terms": [
+        "harm reduction ethics",
+        "harm reduction framework"
+      ],
+      "surface_when": "practice_action_first high OR moral_care_dignity high",
+      "order_hint": 11,
+      "notes": null
+    },
+    {
+      "id": "R006",
+      "category": "Ways of Thinking",
+      "name": "Restorative and transformative justice",
+      "description": "Approaches that emphasize accountability, repair, and community transformation rather than punishment alone.",
+      "search_terms": [
+        "restorative justice",
+        "transformative justice"
+      ],
+      "surface_when": "justice_scope_systemic high OR moral_fairness high",
+      "order_hint": 14,
+      "notes": null
+    },
+    {
+      "id": "R007",
+      "category": "Ways of Thinking",
+      "name": "Liberation-oriented theology (as a framework)",
+      "description": "Interpretive approaches that ask how religious language relates to power, oppression, and liberation in real communities.",
+      "search_terms": [
+        "liberation theology framework",
+        "liberationist interpretation"
+      ],
+      "surface_when": "authority_text high AND justice_scope_systemic high",
+      "order_hint": 16,
+      "notes": "Surface as example; not endorsement of a tradition."
+    },
+    {
+      "id": "R008",
+      "category": "Ways of Thinking",
+      "name": "Feminist theology (as a framework)",
+      "description": "Interpretive approaches that examine how gender and power shaped religious tradition and moral teaching.",
+      "search_terms": [
+        "feminist theology",
+        "feminist ethics religion"
+      ],
+      "surface_when": "justice_scope_systemic high",
+      "order_hint": 20,
+      "notes": "Not the same as womanist; distinct histories."
+    },
+    {
+      "id": "R009",
+      "category": "Ways of Thinking",
+      "name": "Womanist theology/ethics (as a framework)",
+      "description": "Interpretive approaches rooted in Black women’s lived experience, examining race, gender, and liberation in spiritual and ethical life.",
+      "search_terms": [
+        "womanist theology",
+        "womanist ethics"
+      ],
+      "surface_when": "justice_scope_systemic high",
+      "order_hint": 19,
+      "notes": null
+    },
+    {
+      "id": "R010",
+      "category": "Ways of Thinking",
+      "name": "Queer theology/ethics (as a framework)",
+      "description": "Approaches that examine sexuality, normativity, and inclusion in religious and moral imagination.",
+      "search_terms": [
+        "queer theology",
+        "queer ethics religion",
+        "LGBTQ affirming theology"
+      ],
+      "surface_when": "justice_scope_systemic high",
+      "order_hint": 21,
+      "notes": null
+    },
+    {
+      "id": "R011",
+      "category": "Ways of Thinking",
+      "name": "Postcolonial theology (as a framework)",
+      "description": "Approaches that examine how empire and colonial power shaped religious interpretation and moral categories.",
+      "search_terms": [
+        "postcolonial theology",
+        "religion and colonialism"
+      ],
+      "surface_when": "justice_scope_systemic high",
+      "order_hint": 22,
+      "notes": null
+    },
+    {
+      "id": "R012",
+      "category": "Practices",
+      "name": "Mindfulness meditation (secular entry points)",
+      "description": "Paying attention to thoughts and sensations without judgment. Often explored through breath-focused practice or short guided sessions.",
+      "search_terms": [
+        "breath-focused mindfulness",
+        "body scan meditation",
+        "secular mindfulness meditation"
+      ],
+      "surface_when": "practice_readiness moderate OR practice_low_pressure high",
+      "order_hint": 10,
+      "notes": null
+    },
+    {
+      "id": "R013",
+      "category": "Practices",
+      "name": "Loving-kindness (metta) meditation",
+      "description": "A compassion practice that cultivates goodwill toward self and others through simple phrases or intentions.",
+      "search_terms": [
+        "loving-kindness meditation",
+        "metta meditation",
+        "compassion meditation"
+      ],
+      "surface_when": "moral_care_dignity high AND practice_readiness moderate",
+      "order_hint": 14,
+      "notes": null
+    },
+    {
+      "id": "R014",
+      "category": "Practices",
+      "name": "Centering prayer without belief pressure",
+      "description": "A silence-based practice using a neutral anchor (word or breath). Can be used theistically or non-theistically.",
+      "search_terms": [
+        "centering prayer without belief",
+        "contemplative silence practice"
+      ],
+      "surface_when": "meaning_symbolic high AND practice_low_pressure high",
+      "order_hint": 16,
+      "notes": null
+    },
+    {
+      "id": "R015",
+      "category": "Practices",
+      "name": "Values-focused journaling",
+      "description": "Writing to clarify priorities, boundaries, and what feels non-negotiable without turning it into a performance.",
+      "search_terms": [
+        "values journaling prompts",
+        "values clarification journaling"
+      ],
+      "surface_when": "authority_internal high",
+      "order_hint": 18,
+      "notes": null
+    },
+    {
+      "id": "R016",
+      "category": "Practices",
+      "name": "Values card sorting / forced-choice exercises",
+      "description": "Short exercises that surface priorities by making tradeoffs explicit, helpful when certainty is low but decisions are real.",
+      "search_terms": [
+        "values card sort",
+        "values clarification exercise"
+      ],
+      "surface_when": "authority_internal high OR sacred_values_strength high",
+      "order_hint": 19,
+      "notes": null
+    },
+    {
+      "id": "R017",
+      "category": "Practices",
+      "name": "Box breathing",
+      "description": "A simple breath practice (equal counts) used for regulation and clarity in stressful moments.",
+      "search_terms": [
+        "box breathing technique",
+        "paced breathing 4-4-4-4"
+      ],
+      "surface_when": "practice_low_pressure high",
+      "order_hint": 12,
+      "notes": null
+    },
+    {
+      "id": "R018",
+      "category": "Practices",
+      "name": "Mindful walking",
+      "description": "A grounding practice using attention to steps, breath, and surroundings. Often preferred by people who dislike sitting meditation.",
+      "search_terms": [
+        "mindful walking practice",
+        "walking meditation secular"
+      ],
+      "surface_when": "practice_low_pressure high",
+      "order_hint": 13,
+      "notes": null
+    },
+    {
+      "id": "R019",
+      "category": "Practices",
+      "name": "Ethical reflection check-in",
+      "description": "Brief reflection connecting actions to values, often done daily or weekly without shame language.",
+      "search_terms": [
+        "ethical reflection check-in",
+        "integrity reflection practice"
+      ],
+      "surface_when": "expression_ethics_first high",
+      "order_hint": 11,
+      "notes": null
+    },
+    {
+      "id": "R020",
+      "category": "Practices",
+      "name": "Personal ritual marking (ritual-lite)",
+      "description": "Optional personal rituals for transitions or intentions, created or adapted by you without prescribed meaning.",
+      "search_terms": [
+        "personal ritual marking",
+        "candle ritual intention setting",
+        "letting go ritual"
+      ],
+      "surface_when": "expression_ritual_rhythm high AND system_distrust_sensitivity high",
+      "order_hint": 17,
+      "notes": null
+    },
+    {
+      "id": "R021",
+      "category": "Action pathways",
+      "name": "Mutual aid",
+      "description": "Community care oriented around meeting needs and reducing harm through shared responsibility.",
+      "search_terms": [
+        "mutual aid organizing",
+        "mutual aid community"
+      ],
+      "surface_when": "practice_action_first high OR justice_scope_systemic high",
+      "order_hint": 10,
+      "notes": null
+    },
+    {
+      "id": "R022",
+      "category": "Action pathways",
+      "name": "Community volunteering aligned with dignity",
+      "description": "Service oriented toward care and dignity rather than saviorism, often locally grounded.",
+      "search_terms": [
+        "volunteering harm reduction",
+        "community care volunteering"
+      ],
+      "surface_when": "moral_care_dignity high",
+      "order_hint": 18,
+      "notes": null
+    },
+    {
+      "id": "R023",
+      "category": "Action pathways",
+      "name": "Restorative justice practice communities",
+      "description": "Groups and trainings focused on repair, accountability, and transformation in conflict and harm.",
+      "search_terms": [
+        "restorative justice circles",
+        "restorative practices training"
+      ],
+      "surface_when": "justice_scope_systemic high",
+      "order_hint": 14,
+      "notes": null
+    },
+    {
+      "id": "R024",
+      "category": "Action pathways",
+      "name": "LGBTQ-affirming community work",
+      "description": "Community efforts that support dignity and safety for LGBTQ people without requiring shared doctrine.",
+      "search_terms": [
+        "LGBTQ affirming community work",
+        "LGBTQ advocacy local"
+      ],
+      "surface_when": "justice_scope_systemic high",
+      "order_hint": 16,
+      "notes": null
+    },
+    {
+      "id": "R025",
+      "category": "Action pathways",
+      "name": "Racial justice advocacy (local entry points)",
+      "description": "Efforts oriented toward reducing racialized harm and increasing accountability in systems and institutions.",
+      "search_terms": [
+        "racial justice advocacy",
+        "anti-racism community organizing"
+      ],
+      "surface_when": "justice_scope_systemic high",
+      "order_hint": 15,
+      "notes": null
+    },
+    {
+      "id": "R026",
+      "category": "Traditions (optional examples)",
+      "name": "Quaker practice (silent meeting as example)",
+      "description": "A tradition known for silent worship and discernment that can appeal to people who value reflection without rigid doctrine.",
+      "search_terms": [
+        "quaker silent meeting",
+        "quaker discernment practice"
+      ],
+      "surface_when": "meaning_symbolic high AND authority_relational moderate AND system_distrust_sensitivity high",
+      "order_hint": 35,
+      "notes": "Example only; not endorsement."
+    },
+    {
+      "id": "R027",
+      "category": "Traditions (optional examples)",
+      "name": "Unitarian Universalism (as an example)",
+      "description": "A pluralistic religious community model that often welcomes multiple beliefs and emphasizes ethics and inclusion.",
+      "search_terms": [
+        "Unitarian Universalist community",
+        "UU values"
+      ],
+      "surface_when": "authority_relational high AND uncertainty_comfort high",
+      "order_hint": 36,
+      "notes": "Example only; surface only if user wants community and low coercion."
+    },
+    {
+      "id": "R028",
+      "category": "Traditions (optional examples)",
+      "name": "Progressive Christianity (as an example)",
+      "description": "Approaches that reinterpret Christian language through ethics, justice, and non-literal readings of scripture.",
+      "search_terms": [
+        "progressive Christianity",
+        "non-literal Bible interpretation"
+      ],
+      "surface_when": "authority_text moderate AND belief_reinterpret high",
+      "order_hint": 37,
+      "notes": "Example only; do not present as default or superior."
+    }
+  ],
+  "search_terms": [
+    {
+      "bucket": "Ways of thinking",
+      "terms": [
+        "virtue ethics",
+        "narrative ethics",
+        "pragmatic ethics",
+        "harm reduction ethics",
+        "restorative justice",
+        "transformative justice",
+        "womanist theology",
+        "queer theology",
+        "postcolonial theology",
+        "feminist theology"
+      ],
+      "notes": "Surface buckets based on indices; these are starting points, not recommendations."
+    },
+    {
+      "bucket": "Practices",
+      "terms": [
+        "centering prayer without belief",
+        "secular mindfulness meditation",
+        "body scan meditation",
+        "loving-kindness meditation",
+        "box breathing technique",
+        "mindful walking practice",
+        "values clarification exercise",
+        "values-based journaling",
+        "ethical reflection check-in",
+        "personal ritual marking"
+      ],
+      "notes": "Prefer specific entry points to avoid overly broad search results."
+    },
+    {
+      "bucket": "Values in action",
+      "terms": [
+        "mutual aid organizing",
+        "restorative justice circles",
+        "racial justice advocacy",
+        "LGBTQ affirming community work",
+        "community care volunteering",
+        "anti-racism community organizing"
+      ],
+      "notes": "Shown only when justice scope systemic or action-first is high."
+    }
+  ],
+  "ui_copy": {
+    "result_title": {
+      "text": "Your Current Spirituality, Meaning & Values Snapshot",
+      "notes": "Locked decision"
+    },
+    "disclaimer_general": {
+      "text": "This tool is designed to support reflection and exploration. It is not a clinical assessment or a definitive label.",
+      "notes": "Always visible"
+    },
+    "retake_language": {
+      "text": "Some people revisit this after a season of change or experimentation.",
+      "notes": "No progress framing"
+    },
+    "section3_terms_header": {
+      "text": "Optional: Terms people often explore next",
+      "notes": "Always optional"
+    },
+    "terms_disclaimer": {
+      "text": "These are starting points, not recommendations.",
+      "notes": "Avoid endorsement"
+    },
+    "religious_history_disclaimer": {
+      "text": "The examples below may not match your story exactly. They’re examples of the kinds of things people with a similar orientation often re-evaluate, let go of, or reclaim.",
+      "notes": "Requested phrasing"
+    }
+  },
+  "narrative_system": {
+    "thresholds": {
+      "high": 0.4,
+      "moderate": 0.2,
+      "low": 0.25
+    },
+    "cross_cutting": {
+      "section1": [
+        {
+          "id": "cc_system_distrust_high",
+          "condition": "system_distrust_sensitivity >= 0.4",
+          "text": "Your responses suggest that experiences with authority systems may have been painful, invalidating, or unsafe. If you find yourself cautious, guarded, or slow to trust anything that resembles structure or leadership, that makes sense. Many people arrive here not because they are resistant, but because they learned that unquestioned authority came at a cost. Nothing in this snapshot requires you to hand your judgment back over to anyone or anything."
+        }
+      ],
+      "section3": [
+        {
+          "id": "cc_practice_readiness_low",
+          "condition": "practice_readiness < 0.25",
+          "text": "Your responses suggest that you are not ready to take on new practices right now. That is not a failure or a delay to overcome. For many people, simply naming values, boundaries, or unresolved questions is enough work for the moment. Readiness often grows through rest and clarity, not pressure."
+        },
+        {
+          "id": "cc_practice_readiness_mod",
+          "condition": "practice_readiness >= 0.25 && practice_readiness < 0.45",
+          "text": "Your answers suggest a moderate openness to practice. You may be curious but cautious, interested without wanting obligation. For many people, this looks like experimenting occasionally, adapting practices to fit real life, or stopping when something feels unhelpful rather than pushing through."
+        },
+        {
+          "id": "cc_practice_readiness_high",
+          "condition": "practice_readiness >= 0.45",
+          "text": "Your responses suggest a strong readiness to engage practices that support your values or orientation. This often reflects a desire to move from reflection into lived experience. Even so, readiness does not require intensity. Practices can still be chosen for sustainability rather than ambition."
+        },
+        {
+          "id": "cc_practice_low_pressure",
+          "condition": "practice_low_pressure >= 0.4",
+          "text": "Your answers suggest that low-pressure approaches matter to you. Practices that are optional, brief, and adaptable are more likely to feel supportive than those that demand consistency or performance. Many people with this preference benefit from practices framed as tools rather than disciplines."
+        },
+        {
+          "id": "cc_structure_high",
+          "condition": "structure_preference >= 0.4",
+          "text": "Your responses suggest that some structure feels grounding. Clear rhythms, defined practices, or gentle accountability may help you follow through and feel supported. Structure, in this sense, is not about control but about reducing cognitive load and decision fatigue."
+        },
+        {
+          "id": "cc_structure_low",
+          "condition": "structure_preference < 0.2",
+          "text": "Your results suggest a preference for flexibility. You may resist anything that feels rigid, repetitive, or externally imposed. Practices that allow you to respond to the moment, your energy, or your context are more likely to feel respectful and sustainable."
+        }
+      ],
+      "religious_history": [
+        {
+          "id": "cc_history_integrate_no_text",
+          "condition": "identity_integration >= 0.4 && authority_text < 0.2",
+          "text": "Your responses suggest that you want to integrate parts of your religious past without returning to sacred texts as authorities. For many people, this looks like keeping values, stories, or formative experiences while letting go of scripture as the final word. The past remains meaningful, but it no longer gets to decide for you."
+        },
+        {
+          "id": "cc_history_text_ambivalent",
+          "condition": "authority_text >= 0.2 && authority_text < 0.4",
+          "text": "Your results suggest an ongoing, ambivalent relationship with sacred texts. You may still read or reference them, but with caution and selectivity. For people in this space, texts become conversation partners rather than commands, offering insight at times and resistance at others."
+        },
+        {
+          "id": "cc_history_moved_on",
+          "condition": "identity_integration < 0.2 && authority_text < 0.2",
+          "text": "Your responses suggest that you have largely moved on from your religious past. Rather than trying to integrate or reinterpret it, you may feel that it no longer plays a meaningful role in how you understand yourself or the world. For many people, this represents not loss, but closure."
+        }
+      ]
+    },
+    "P_ACTION": {
+      "name": "Action-oriented, belief-agnostic",
+      "section1": {
+        "profileBase": [
+          {
+            "id": "p_action_s1_base_001",
+            "text": "You tend to approach questions of meaning with a practical lens. Rather than spending much energy on defining beliefs, you focus on how ideas show up in behavior and consequences. This orientation often develops in people who care deeply about impact and responsibility."
+          },
+          {
+            "id": "p_action_s1_base_002",
+            "text": "For you, credibility is often earned through action. Ideas that remain abstract or disconnected from lived outcomes may feel unconvincing, regardless of how well they are argued. This does not reflect disinterest in meaning, but a demand that meaning matter."
+          }
+        ],
+        "enrichers": [
+          {
+            "id": "p_action_s1_meaning_pragmatic_low",
+            "condition": "meaning_pragmatic < 0.25",
+            "text": "Your responses suggest that outcomes are not the primary way you evaluate meaning. Rather than asking first whether an idea 'works' in practice, you may find yourself drawn to questions of coherence, truthfulness, or personal resonance. This often shows up as wanting beliefs or values to make sense internally, even before considering their real-world impact."
+          },
+          {
+            "id": "p_action_s1_meaning_pragmatic_mod",
+            "condition": "meaning_pragmatic >= 0.25 && meaning_pragmatic < 0.45",
+            "text": "Your answers suggest that impact matters to you, but it is not the sole lens through which you evaluate meaning. You may care about outcomes while also weighing other factors, such as consistency, personal integrity, or whether an idea feels intellectually honest. For people like you, meaning often emerges from balancing consequences with coherence."
+          },
+          {
+            "id": "p_action_s1_meaning_pragmatic_high",
+            "condition": "meaning_pragmatic >= 0.45",
+            "text": "You tend to treat meaning as something that becomes real through impact. In everyday life, this often looks like asking, 'Does this belief make me kinder, braver, or more accountable?' rather than 'Can I prove this is true?'"
+          },
+          {
+            "id": "p_action_s1_uncertainty_low",
+            "condition": "uncertainty_comfort < 0.25",
+            "text": "Your responses suggest that uncertainty is still uncomfortable. You may feel a pull toward clearer answers or firmer grounding, especially when uncertainty affects decisions with real consequences. This does not mean you require rigid certainty, but it does suggest that unanswered questions can feel destabilizing rather than neutral."
+          },
+          {
+            "id": "p_action_s1_uncertainty_high",
+            "condition": "uncertainty_comfort >= 0.35",
+            "text": "You seem able to hold unanswered questions without panic. That often shows up as a calm refusal to pretend certainty when you do not have it."
+          },
+          {
+            "id": "p_action_s1_authority_internal_mod",
+            "condition": "authority_internal >= 0.25 && authority_internal < 0.45",
+            "text": "Your results suggest a mixed relationship with internal authority. You do rely on your own judgment, but it may share space with other sources such as trusted experts, shared norms, or collective reasoning. For many people, this looks like wanting personal responsibility without feeling solely responsible for every decision."
+          },
+          {
+            "id": "p_action_s1_authority_internal_high",
+            "condition": "authority_internal >= 0.45",
+            "text": "When it comes to authority, you rely primarily on your own judgment, informed by evidence, experience, and the visible consequences of systems and decisions. You tend to be skeptical of claims that demand trust without accountability, especially when they conflict with lived reality."
+          },
+          {
+            "id": "p_action_s1_authority_text_engaged",
+            "condition": "authority_text > -0.15",
+            "text": "Your responses indicate that sacred or inherited texts may still hold some weight for you, even if they are no longer absolute. Rather than dismissing them entirely, you may treat them as conversation partners, cultural touchstones, or sources of insight that are evaluated alongside lived experience and ethical outcomes."
+          },
+          {
+            "id": "p_action_s1_authority_text_low",
+            "condition": "authority_text <= -0.35",
+            "text": "If you come from a background that treated sacred texts as the final word, your answers suggest you are no longer willing to hand over authority to a document simply because it is called sacred. That can feel like loss, but it can also feel like relief."
+          }
+        ]
+      },
+      "section2": {
+        "profileBase": [
+          {
+            "id": "p_action_s2_base_001",
+            "text": "Your values appear to be shaped less by ideology and more by attention to harm and responsibility. You are likely to evaluate choices by asking who is affected and whether suffering is reduced or intensified."
+          },
+          {
+            "id": "p_action_s2_base_002",
+            "text": "Even without a defined belief system, your moral orientation shows coherence. You are not drifting aimlessly. You are navigating with a compass calibrated to consequences and care."
+          }
+        ],
+        "enrichers": [
+          {
+            "id": "p_action_s2_systemic_mod",
+            "condition": "justice_scope_systemic >= 0.25 && justice_scope_systemic < 0.45",
+            "text": "Your results suggest that you are aware of systemic factors, even if they are not always your primary focus. You may notice how institutions and structures influence harm, while still tending to evaluate situations through individual cases or concrete outcomes rather than abstract systems."
+          },
+          {
+            "id": "p_action_s2_systemic_high",
+            "condition": "justice_scope_systemic >= 0.45",
+            "text": "A strong pattern in your results is concern for systemic impact. That often looks like noticing how policies, institutions, and cultural norms shape outcomes long before any one person makes a choice."
+          },
+          {
+            "id": "p_action_s2_interpersonal_high",
+            "condition": "justice_scope_interpersonal >= 0.35",
+            "text": "Your responses suggest that interpersonal harm carries particular weight for you. You may be especially attentive to how people treat one another directly, such as whether someone is respected, listened to, or protected in everyday interactions. For many people, this becomes the most immediate site of ethical responsibility."
+          },
+          {
+            "id": "p_action_s2_sacred_values_low",
+            "condition": "sacred_values_strength < 0.25",
+            "text": "Your results suggest that you may not experience many values as strictly non-negotiable. Instead of firm moral lines, you may approach ethics with flexibility, context, and responsiveness. For people like you, moral decisions often feel situational rather than anchored to absolute boundaries."
+          },
+          {
+            "id": "p_action_s2_sacred_values_high",
+            "condition": "sacred_values_strength >= 0.25",
+            "text": "People with a similar profile often treat some values as non-negotiable, even if they avoid moral language. That can show up as firm boundaries around exploitation, exclusion, or abuse of power."
+          }
+        ]
+      },
+      "section3": {
+        "profileBase": [
+          {
+            "id": "p_action_s3_base_001",
+            "text": "When you explore ideas or practices, usefulness matters. You are more likely to engage with things that help you act with integrity than with systems that require belief buy-in before participation."
+          },
+          {
+            "id": "p_action_s3_base_002",
+            "text": "For many people with this orientation, clarity emerges through action rather than before it. Trying something and observing its effects often teaches more than extended theorizing."
+          }
+        ],
+        "waysOfLivingValues": {
+          "intro": "Ways of living values in action that often resonate for people like you:",
+          "items": [
+            "Mutual aid participation",
+            "LGBTQ affirming advocacy or community care",
+            "Racial justice organizing or education",
+            "Restorative justice involvement in your local context"
+          ]
+        },
+        "searchTerms": {
+          "title": "Optional: Terms People Often Explore Next",
+          "intro": "If you choose to explore further, people with a similar orientation often look up ideas or practices using terms like these. These are starting points, not recommendations.",
+          "categories": [
+            {
+              "title": "Ways of thinking",
+              "terms": [
+                "harm reduction ethics",
+                "pragmatic moral philosophy",
+                "justice-oriented ethics"
+              ]
+            },
+            {
+              "title": "Practices",
+              "terms": [
+                "values-based decision making",
+                "ethical reflection practice",
+                "brief mindfulness for stress regulation"
+              ]
+            },
+            {
+              "title": "Ways of living values in action",
+              "terms": [
+                "mutual aid organizing",
+                "racial justice advocacy",
+                "LGBTQ-affirming community work",
+                "restorative justice practices"
+              ]
+            }
+          ]
+        },
+        "waysOfThinking": {
+          "title": "Ways of Thinking",
+          "intro": "People with an action-oriented orientation often resonate with ways of thinking that evaluate ideas by their effects rather than their internal coherence or metaphysical certainty. What tends to matter most is whether a framework helps reduce harm, clarify responsibility, or guide better decisions in the real world. These approaches usually feel grounded, accountable, and usable, especially when belief systems have felt abstract or disconnected from lived outcomes.",
+          "items": [
+            "Pragmatic ethics",
+            "Harm-reduction frameworks",
+            "Justice-oriented moral reasoning",
+            "Restorative ethics"
+          ],
+          "outro": "These approaches tend to focus less on what must be believed and more on what actually helps. Instead of asking whether a worldview is 'right,' they ask whether it leads to less harm, more dignity, and more responsible action."
+        },
+        "practices": {
+          "title": "Practices",
+          "intro": "When practices are useful for this orientation, they are usually brief, concrete, and instrumental. Rather than daily disciplines or identity-defining routines, practices tend to function as tools that can be picked up when needed and set down when they no longer serve a purpose.",
+          "items": [
+            "Ethical decision check-ins focused on impact",
+            "Brief reflective pauses before or after difficult actions",
+            "Values clarification exercises tied to real-world choices",
+            "Impact reviews that ask who was helped or harmed",
+            "Short grounding practices to reduce reactivity under stress"
+          ],
+          "outro": "These practices are often used situationally rather than routinely. What matters is not consistency for its own sake, but whether a practice helps you act with clarity and integrity in specific moments."
+        }
+      }
+    },
+    "P_REFLECTIVE": {
+      "name": "Reflective, meaning-oriented",
+      "section1": {
+        "profileBase": [
+          {
+            "id": "p_refl_s1_base_001",
+            "text": "You approach meaning as something that unfolds through reflection, inner coherence, and lived experience. Questions of purpose, symbolism, and resonance tend to matter more than arriving at fixed conclusions."
+          },
+          {
+            "id": "p_refl_s1_base_002",
+            "text": "Rather than rushing toward certainty, you often linger with questions. For you, the process of understanding can be as significant as any answer."
+          }
+        ],
+        "enrichers": [
+          {
+            "id": "p_refl_s1_symbolic_mod",
+            "condition": "meaning_symbolic >= 0.25 && meaning_symbolic < 0.45",
+            "text": "Your responses suggest a mixed approach to symbolic meaning. You may appreciate metaphor, story, and layered interpretation in some contexts, while still wanting clarity or factual grounding in others. This often shows up as selectively engaging symbolic language when it feels illuminating rather than obligatory."
+          },
+          {
+            "id": "p_refl_s1_symbolic_low",
+            "condition": "meaning_symbolic < 0.25",
+            "text": "Your results suggest that symbolic or metaphorical approaches may no longer feel central or helpful. You may be moving away from interpretive frameworks that rely heavily on metaphor, preferring ideas that feel more concrete, grounded, or directly applicable to lived experience."
+          },
+          {
+            "id": "p_refl_s1_symbolic_high",
+            "condition": "meaning_symbolic >= 0.45",
+            "text": "You seem comfortable reading stories and teachings as meaning containers rather than literal transcripts of reality. In daily life, this often looks like asking, 'What is this trying to reveal about being human?' instead of 'Did this happen exactly like this?'"
+          },
+          {
+            "id": "p_refl_s1_uncertainty_low",
+            "condition": "uncertainty_comfort < 0.25",
+            "text": "Your responses indicate that paradox and unresolved questions can still feel difficult. You may experience tension when ideas resist resolution, especially if your background framed ambiguity as failure or danger. This often reflects a desire for stability rather than a lack of curiosity."
+          },
+          {
+            "id": "p_refl_s1_uncertainty_high",
+            "condition": "uncertainty_comfort >= 0.35",
+            "text": "You appear able to hold paradox without treating it as failure. That can be a stabilizing strength when your background trained you to fear uncertainty."
+          },
+          {
+            "id": "p_refl_s1_relational_low",
+            "condition": "authority_relational < 0.25",
+            "text": "Your results suggest that you tend to work through meaning and decisions more independently. Rather than relying heavily on shared discernment or communal authority, you may prefer solitary reflection, personal study, or internal processing when navigating beliefs and values."
+          },
+          {
+            "id": "p_refl_s1_relational_high",
+            "condition": "authority_relational >= 0.35",
+            "text": "Your authority style looks relational and integrative. Instead of one final authority, you tend to weigh experience, community wisdom, reason, and compassion together."
+          }
+        ]
+      },
+      "section2": {
+        "profileBase": [
+          {
+            "id": "p_refl_s2_base_001",
+            "text": "Your values appear closely tied to empathy and attentiveness. You are likely to consider not only what is right, but what is wise, humane, and responsive to complexity."
+          },
+          {
+            "id": "p_refl_s2_base_002",
+            "text": "This orientation often produces a quiet seriousness about ethics. Even when beliefs remain open-ended, care and integrity continue to guide your choices."
+          }
+        ],
+        "enrichers": [
+          {
+            "id": "p_refl_s2_care_mod",
+            "condition": "moral_care_dignity >= 0.15 && moral_care_dignity < 0.35",
+            "text": "Your responses suggest that care and dignity matter to you, but they may not be the primary lens through which you evaluate every situation. You may balance concern for others with other values, such as autonomy, coherence, or personal meaning, depending on context."
+          },
+          {
+            "id": "p_refl_s2_care_high",
+            "condition": "moral_care_dignity >= 0.35",
+            "text": "A strong thread in your responses is care. That often looks like paying attention to who is affected, who is ignored, and what kind of world your choices create."
+          },
+          {
+            "id": "p_refl_s2_fairness_low",
+            "condition": "moral_fairness < 0.25",
+            "text": "Your results suggest that fairness or proportionality may not be a central driver of your moral reasoning. While you may still care about harm, your ethical attention may be less focused on balance, rules, or equal treatment and more on compassion, understanding, or personal context."
+          },
+          {
+            "id": "p_refl_s2_fairness_high",
+            "condition": "moral_fairness >= 0.35",
+            "text": "You also appear to value fairness and dignity. For many people, this becomes a bridge between spiritual language and public life, because it turns values into action."
+          },
+          {
+            "id": "p_refl_s2_systemic_high",
+            "condition": "justice_scope_systemic >= 0.35",
+            "text": "Even within a reflective, inward-facing orientation, your responses suggest a strong awareness of systemic injustice. You may spend time thinking about how large-scale structures shape suffering and meaning, integrating ethical concern for systems into your personal reflection rather than separating the two."
+          }
+        ]
+      },
+      "section3": {
+        "profileBase": [
+          {
+            "id": "p_refl_s3_base_001",
+            "text": "When exploring practices or ideas, you may be drawn to those that deepen awareness rather than prescribe behavior. Insight, presence, and meaning-making tend to be central motivations."
+          },
+          {
+            "id": "p_refl_s3_base_002",
+            "text": "For people like you, practices often function as invitations to notice rather than instructions to perform. What matters is whether something fosters clarity and compassion."
+          }
+        ],
+        "practices": {
+          "intro": "Specific practices people like you often experiment with:",
+          "items": [
+            "Centering prayer",
+            "Lectio divina approached as poetry, not proof",
+            "Mindfulness meditation with a simple breath anchor",
+            "Walking meditation",
+            "Journaling with values prompts rather than doctrine prompts"
+          ]
+        },
+        "searchTerms": {
+          "title": "Optional: Terms People Often Explore Next",
+          "intro": "If you choose to explore further, people with a reflective, meaning-oriented approach often look for ideas or practices using terms like these. These are starting points, not directions you are expected to follow.",
+          "categories": [
+            {
+              "title": "Ways of thinking",
+              "terms": [
+                "contemplative philosophy",
+                "symbolic interpretation of religious texts",
+                "existential meaning-making",
+                "nondual spirituality"
+              ]
+            },
+            {
+              "title": "Practices",
+              "terms": [
+                "centering prayer",
+                "lectio divina practice",
+                "contemplative journaling",
+                "silent meditation"
+              ]
+            },
+            {
+              "title": "Ways of living values in action",
+              "terms": [
+                "contemplative activism",
+                "spiritually grounded community care",
+                "reflective ethics practice",
+                "accompaniment and presence-based service"
+              ]
+            }
+          ]
+        },
+        "waysOfThinking": {
+          "title": "Ways of Thinking",
+          "intro": "People with a reflective, meaning-oriented approach are often drawn to frameworks that honor depth, nuance, and inner coherence rather than certainty or fixed conclusions. Meaning tends to emerge for you through reflection, symbol, and lived experience, not through proving claims or resolving every question. What resonates are ways of thinking that make room for mystery while still offering orientation.",
+          "items": [
+            "Symbolic and metaphorical approaches to religious or philosophical texts",
+            "Existential approaches to meaning-making",
+            "Contemplative philosophy",
+            "Nondual or integrative perspectives on self and reality"
+          ],
+          "outro": "For people who value depth and resonance, these approaches function less as systems to adopt and more as lenses to look through. They offer language and structure for experiences that are already felt, helping clarify what feels meaningful without demanding final answers."
+        },
+        "waysOfLivingValues": {
+          "title": "Ways of Living Values in Action",
+          "intro": "Even when reflection is central, values do not remain purely internal. For reflective people, action often becomes an extension of insight rather than a separate domain. Choices are guided by attentiveness, empathy, and a desire to live in a way that feels congruent with one's inner understanding.",
+          "items": [
+            "Volunteering that allows for presence and relationship rather than urgency",
+            "Forms of community care that emphasize listening and accompaniment",
+            "Ethical decision-making that includes reflection before and after action",
+            "Practices of repair or reconciliation grounded in empathy and accountability"
+          ],
+          "outro": "For people like you, action and reflection are not opposites. Reflection informs action, and action deepens reflection. Over time, this back-and-forth can become a stable way of living values without rushing toward certainty."
+        }
+      }
+    },
+    "P_REINTERPRETING": {
+      "name": "Religious language, reinterpreting",
+      "section1": {
+        "profileBase": [
+          {
+            "id": "p_reint_s1_base_001",
+            "text": "You are navigating a relationship with religious language that is neither wholesale rejection nor uncritical acceptance. Instead, you are working to understand what can be reclaimed, reimagined, or released."
+          },
+          {
+            "id": "p_reint_s1_base_002",
+            "text": "This often involves tension. Familiar words may still carry meaning, even as you resist how they were once enforced. Your orientation reflects discernment rather than indecision."
+          }
+        ],
+        "enrichers": [
+          {
+            "id": "p_reint_s1_symbolic_high",
+            "condition": "meaning_symbolic >= 0.45",
+            "text": "Your responses suggest that you approach most religious language symbolically rather than literally. Stories, doctrines, and teachings function for you as meaning-rich metaphors that point beyond themselves, not as factual claims that need to be defended. In everyday life, this often looks like asking what a text reveals about human experience, ethics, or longing rather than whether it describes reality exactly as it happened."
+          },
+          {
+            "id": "p_reint_s1_symbolic_low",
+            "condition": "meaning_symbolic < 0.15",
+            "text": "Your results suggest that you still approach much religious language in fairly literal terms. You may want teachings and texts to feel concrete, reliable, and anchored, even if you are questioning how they have been used. For people like you, symbolic or metaphorical readings may feel evasive or unsatisfying rather than freeing."
+          },
+          {
+            "id": "p_reint_s1_reinterpret_low",
+            "condition": "belief_reinterpret < 0.25",
+            "text": "Your responses suggest a desire for stability more than ongoing revision. Rather than constantly reworking beliefs, you may be looking for a version of faith or meaning that can settle and hold. This often reflects fatigue with perpetual questioning rather than resistance to growth."
+          },
+          {
+            "id": "p_reint_s1_reinterpret_high",
+            "condition": "belief_reinterpret >= 0.35",
+            "text": "A key strength in your profile is revisability. You are willing to update beliefs when they fail ethical tests or collapse under real life experience. That is not drift. That is integrity."
+          },
+          {
+            "id": "p_reint_s1_text_high",
+            "condition": "authority_text >= 0.4",
+            "text": "Your results indicate that sacred texts still carry significant authority for you. Even as you reinterpret or question parts of them, they remain a primary reference point for meaning, ethics, or identity. For many people, this shows up as wanting texts to matter deeply without wanting them to be weaponized."
+          },
+          {
+            "id": "p_reint_s1_text_mod",
+            "condition": "authority_text >= 0.2 && authority_text < 0.4",
+            "text": "Your responses suggest an ambivalent relationship with sacred texts. They still matter to you, but not in the unquestioned way they once may have. You may move back and forth between appreciation and skepticism, treating texts as sources of wisdom that require careful filtering rather than automatic trust."
+          },
+          {
+            "id": "p_reint_s1_text_low",
+            "condition": "authority_text < 0.2",
+            "text": "Your results suggest that sacred texts no longer play a major role in how you form meaning or make decisions. Even if they remain part of your history or cultural background, they are no longer central authorities. For many people, this shift brings both clarity and a sense of distance from their former religious world."
+          }
+        ]
+      },
+      "section2": {
+        "profileBase": [
+          {
+            "id": "p_reint_s2_base_001",
+            "text": "Your moral life appears shaped by a desire for accountability. You are interested in whether traditions produce justice, care, and repair, not just whether they are internally consistent."
+          },
+          {
+            "id": "p_reint_s2_base_002",
+            "text": "For many people in this space, ethics become the filter through which everything else passes. Teachings that fail this filter lose authority, regardless of their history."
+          }
+        ],
+        "enrichers": [
+          {
+            "id": "p_reint_s2_fairness_low",
+            "condition": "moral_fairness < 0.25",
+            "text": "Your responses suggest that fairness or proportionality may not be a central moral concern for you. Rather than focusing on balance, rules, or equal treatment, you may be more guided by compassion, context, or relational repair when navigating ethical decisions."
+          },
+          {
+            "id": "p_reint_s2_fairness_high",
+            "condition": "moral_fairness >= 0.25",
+            "text": "A consistent thread is dignity and fairness. For many reconstructing people, this becomes a filter for what to keep. If a teaching degrades dignity, it fails."
+          },
+          {
+            "id": "p_reint_s2_integration_low",
+            "condition": "identity_integration < 0.15",
+            "text": "Your results suggest that community and shared identity are not especially important to your current moral or spiritual orientation. You may feel comfortable working things out privately, without needing to situate yourself within a group or collective narrative."
+          },
+          {
+            "id": "p_reint_s2_integration_high",
+            "condition": "identity_integration >= 0.25",
+            "text": "You may also value community, but your answers suggest you want community without coercion. Belonging must not require losing yourself."
+          },
+          {
+            "id": "p_reint_s2_systemic_high",
+            "condition": "justice_scope_systemic >= 0.35",
+            "text": "Even within a reconstructing relationship to religion, your responses show strong concern for systemic injustice. You may evaluate traditions, teachings, and communities by how they affect marginalized groups, power dynamics, and material conditions, not just individual behavior."
+          }
+        ]
+      },
+      "section3": {
+        "profileBase": [
+          {
+            "id": "p_reint_s3_base_001",
+            "text": "When exploring what comes next, you may find yourself drawn to ideas and practices that allow you to remain in conversation with your religious or philosophical past without being bound by its former shape. Reconstruction is not abandonment, but it is also not preservation. It is creative, selective, and ongoing."
+          },
+          {
+            "id": "p_reint_s3_base_002",
+            "text": "For people like you, meaning often emerges through the act of reinterpretation itself. What you are building is not a replacement system but a living relationship with tradition that can change as you do."
+          }
+        ],
+        "waysOfThinking": {
+          "title": "Ways of Thinking",
+          "intro": "People who are actively reinterpreting their religious or philosophical inheritance often resonate with frameworks that allow both continuity and critique. Rather than treating tradition as something to defend or discard, these approaches make room for questioning, re-reading, and reshaping inherited language in light of ethics, experience, and historical awareness. What matters is not preserving a system intact, but allowing it to become more honest and life-giving.",
+          "items": [
+            "Progressive theology",
+            "Symbolic and metaphorical interpretation frameworks",
+            "Narrative theology",
+            "Post-critical or historical-contextual approaches to tradition"
+          ],
+          "outro": "These approaches help balance continuity with transformation. They allow people to remain in conversation with their past while refusing to freeze it in its former shape, making it possible to carry forward what still has meaning while letting other parts change or fall away."
+        },
+        "practices": {
+          "title": "Practices",
+          "intro": "Practices that support reinterpretation tend to work with familiar forms while changing how they are understood or used. For many people in reconstruction, the form itself is not the problem. The problem was the meaning it was forced to carry. Reworking practices can become a way of reclaiming agency and curiosity without returning to literalism or control.",
+          "items": [
+            "Reinterpreting traditional prayers symbolically rather than literally",
+            "Lectio divina approached with a critical and reflective lens",
+            "Personal ritual reconstruction that adapts inherited forms to new meanings",
+            "Symbolic reading of sacred texts that centers ethical resonance",
+            "Contemplative practices practiced without doctrinal enforcement"
+          ],
+          "outro": "Reinterpreters often use practices flexibly, experimenting and adapting as meanings evolve. A practice may be useful for a season and then set aside or reshaped again as reconstruction continues."
+        },
+        "waysOfLivingValues": {
+          "title": "Ways of Living Values in Action",
+          "intro": "For people actively reconstructing beliefs, action often becomes a testing ground. Living values in the world helps clarify which parts of a tradition still carry weight and which no longer hold up under ethical scrutiny. Action does not wait for reconstruction to be finished. It participates in the process.",
+          "items": [
+            "Community service shaped by dignity, consent, and accountability",
+            "Participation in justice-oriented faith spaces that welcome questioning",
+            "Mutual aid or community care as a lived expression of ethical teaching",
+            "Teaching, mentoring, or facilitation that emphasizes compassion over certainty"
+          ],
+          "outro": "For this profile, reconstruction and action are intertwined. Acting on values can reveal what remains trustworthy, what needs revision, and what no longer belongs, allowing belief and practice to evolve together."
+        },
+        "searchTerms": {
+          "title": "Optional: Terms People Often Explore Next",
+          "intro": "If you choose to explore further, people actively reinterpreting and reconstructing often look for ideas or practices using terms like these. These are starting points, not directions you are expected to follow.",
+          "categories": [
+            {
+              "title": "Ways of thinking",
+              "terms": [
+                "religious reconstruction",
+                "progressive theology",
+                "narrative theology",
+                "symbolic interpretation of scripture"
+              ]
+            },
+            {
+              "title": "Practices",
+              "terms": [
+                "reinterpretation of traditional prayer",
+                "lectio divina with critical approach",
+                "reconstructive ritual practices",
+                "symbolic spiritual practices"
+              ]
+            },
+            {
+              "title": "Ways of living values in action",
+              "terms": [
+                "justice-oriented faith communities",
+                "ethical reconstruction of religion",
+                "faith-based community organizing",
+                "living values during deconstruction"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}
